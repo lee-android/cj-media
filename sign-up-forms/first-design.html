@@ -15,86 +15,90 @@
         <h1> SIGN UP BELOW FOR EXCLUSIVE OFFERS
         </h1>
         
-        <fieldset>
+        <fieldset class="name">
+              <!-- <label id="first-label" for="name">First Name:</label> -->
+              <input type="text" id="first-name" name="user_name" placeholder="First Name*" required>
+              <!-- <label id="last-label" for="name">Last Name:</label> -->
+              <input type="text" id="last-name" placeholder="Last Name*" name="" required>
+        </fieldset>
+        <fieldset class="email-gender">
+          <!-- <label for="email">Email:</label> -->
+          <input type="email" id="mail" name="user_email" placeholder="Email*" required>
           
-          <!-- <legend><span class="number">1</span> Your Basic Info</legend> -->
-        
-          <label for="name">First Name:</label>
-          <input type="text" id="first-name" name="user_name" required>
-          <label for="name">Last Name:</label>
-          <input type="text" id="last-name" name="" required>
-        
-          <label for="email">Email:</label>
-          <input type="email" id="mail" name="user_email" required>
-          
-          <label for="gender">Gender:</label>
           <select name="gender" id="gender-input" class="form-input gender-input">
             <option disabled="disabled" selected="selected">Select Gender*</option>
             <option>Male</option>
             <option>Female</option>
         </select>
+        </fieldset>
         
-            <label for="address">Address:</label>
-            <input type="text" class="form-input address-input" name="address" id="address" placeholder="Street*">
-            <input type="text" class="form-input city-input" name="city" id="city" placeholder="City*">
-            <select name="state" class="form-input state-input">
-                <option disabled="disabled" selected="selected">Select State*</option>
-                  <option value="AK">Alaska</option>
-                  <option value="AL">Alabama</option>
-                  <option value="AR">Arkansas</option>
-                  <option value="AZ">Arizona</option>
-                  <option value="CA">California</option>
-                  <option value="CO">Colorado</option>
-                  <option value="CT">Connecticut</option>
-                  <option value="DC">District of Columbia</option>
-                  <option value="DE">Delaware</option>
-                  <option value="FL">Florida</option>
-                  <option value="GA">Georgia</option>
-                  <option value="HI">Hawaii</option>
-                  <option value="IA">Iowa</option>
-                  <option value="ID">Idaho</option>
-                  <option value="IL">Illinois</option>
-                  <option value="IN">Indiana</option>
-                  <option value="KS">Kansas</option>
-                  <option value="KY">Kentucky</option>
-                  <option value="LA">Louisiana</option>
-                  <option value="MA">Massachusetts</option>
-                  <option value="MD">Maryland</option>
-                  <option value="ME">Maine</option>
-                  <option value="MI">Michigan</option>
-                  <option value="MN">Minnesota</option>
-                  <option value="MO">Missouri</option>
-                  <option value="MS">Mississippi</option>
-                  <option value="MT">Montana</option>
-                  <option value="NC">North Carolina</option>
-                  <option value="ND">North Dakota</option>
-                  <option value="NE">Nebraska</option>
-                  <option value="NH">New Hampshire</option>
-                  <option value="NJ">New Jersey</option>
-                  <option value="NM">New Mexico</option>
-                  <option value="NV">Nevada</option>
-                  <option value="NY">New York</option>
-                  <option value="OH">Ohio</option>
-                  <option value="OK">Oklahoma</option>
-                  <option value="OR">Oregon</option>
-                  <option value="PA">Pennsylvania</option>
-                  <option value="RI">Rhode Island</option>
-                  <option value="SC">South Carolina</option>
-                  <option value="SD">South Dakota</option>
-                  <option value="TN">Tennessee</option>
-                  <option value="TX">Texas</option>
-                  <option value="UT">Utah</option>
-                  <option value="VA">Virginia</option>
-                  <option value="VT">Vermont</option>
-                  <option value="WA">Washington</option>
-                  <option value="WI">Wisconsin</option>
-                  <option value="WV">West Virginia</option>
-                  <option value="WY">Wyoming</option>
-            </select>
-            <input type="text" class="form-input zip-input" name="zipcode" id="zipcode" placeholder="Zipcode*">
-            <label for="DOB">Date of Birth:</label>
-            <select name="month" class="form-input month-input" id="month" style="color: #918B89;">
-                <option disabled="disabled" selected="selected">Month*</option>
+            <!-- <label for="address">Address:</label> -->
+            <fieldset class="street-city">
+                <input type="text" class="address" name="address" id="address" placeholder="Street*">
+                <input type="text" class="city-input" name="city" id="city" placeholder="City*">
+            </fieldset>
+
+            <fieldset class="state-zip">
+                <select name="state" class="form-input state-input" id="state">
+                    <option disabled="disabled" selected="selected">Select State*</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DC">District of Columbia</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="IA">Iowa</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MD">Maryland</option>
+                      <option value="ME">Maine</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MT">Montana</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NY">New York</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VA">Virginia</option>
+                      <option value="VT">Vermont</option>
+                      <option value="WA">Washington</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WY">Wyoming</option>
+                </select>
+                <input type="text" class="form-input zip-input" name="zipcode" id="zipcode" placeholder="Zipcode*">
+            </fieldset>
+
+            <fieldset class="dob">
+                <select name="month" class="form-input month-input" id="month" style="color: #918B89;">
+                <option disabled="disabled" selected="selected">DOB Month*</option>
                 <option value="01">Jan</option>
                 <option value="02">Feb</option>
                 <option value="03">Mar</option>
@@ -109,7 +113,7 @@
                 <option value="12">Dec</option>
             </select>
             <select name="day" class="form-input day-input" id="day" style="color: #918B89;">
-                <option disabled="disabled" selected="selected">Day*</option>
+                <option disabled="disabled" selected="selected">DOB Day*</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -143,7 +147,7 @@
                 <option value="31">31</option>
               </select>
               <select name="year" class="form-input year-input" id="year" style="color: #918B89;">
-                <option disabled="disabled" selected="selected">Year*</option>
+                <option disabled="disabled" selected="selected">DOB Year*</option>
                 <option value="2002">2004</option>
                 <option value="2002">2003</option>
                 <option value="2002">2002</option>
@@ -229,16 +233,18 @@
                 <option value="1922">1922</option>
                 <option value="1921">1921</option>
               </select>
-              <input type="checkbox" name="agree" id="agree-term" class="ck-box-element age-confirmation-input" value="false">
-              <label for="agree-term" class="label-agree-term"><span><span></span></span>I am at least 18 years of age and consent to receive sexually explicit emails from or on behalf of TakenLadies.com, and other marketing partners and their affiliates.</label>
-              <input type="checkbox" name="agree" id="agree-term" class="ck-box-element age-confirmation-input" value="false">
-              <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to the statements in  <a href="termsandconditions.html" class="term-service">Terms of Service</a> and <a href="privacypolicy.html" class="term-service">Privacy Policy</a>.</label>
-        </fieldset>
+            </fieldset>
+              <div class="terms">
+                  <input type="checkbox" name="agree" id="agree-term" class="ck-box-element age-confirmation-input" value="false">
+                  <label for="agree-term" class="label-agree-term"><span><span></span></span>I am at least 18 years of age and consent to receive sexually explicit emails from or on behalf of TakenLadies.com, and other marketing partners and their affiliates.</label>
+                  <input type="checkbox" name="agree" id="agree-term" class="ck-box-element age-confirmation-input" value="false">
+                  <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to the statements in  <a href="termsandconditions.html" class="term-service">Terms of Service</a> and <a href="privacypolicy.html" class="term-service">Privacy Policy</a>.</label>
+                </div>
         
-       
+        
         <button type="submit">Sign Up</button>
         
-       </form>
+    </form>
         </div>
       </div>
       

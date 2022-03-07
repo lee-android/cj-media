@@ -7,7 +7,7 @@
 body {
   font-family: 'Nunito', sans-serif;
   color: #444;
-  background:linear-gradient(0deg, rgb(0, 0, 0), rgba(86, 147, 155, 0.3)), url(/imgs/wkly-lvrs-background.jpeg) no-repeat scroll;
+  background:linear-gradient(0deg, rgb(0, 0, 0), rgba(86, 147, 155, 0.3)), url(https://images.pexels.com/photos/4553619/pexels-photo-4553619.jpeg) no-repeat scroll;
   background-position: center center;
   background-size: contain;
   /* background: url(/imgs/wkly-lvrs-background.jpeg) no-repeat; */

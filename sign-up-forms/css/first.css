@@ -7,11 +7,12 @@
 body {
   font-family: 'Nunito', sans-serif;
   color: #444;
-  background:linear-gradient(0deg, rgba(93, 128, 173, 0.3), rgba(86, 147, 155, 0.3)), url(https://images.pexels.com/photos/4553619/pexels-photo-4553619.jpeg) no-repeat;
+  background:linear-gradient(0deg, rgb(0, 0, 0), rgba(86, 147, 155, 0.3)), url(/imgs/wkly-lvrs-background.jpeg) no-repeat scroll;
   background-position: center center;
-  background-size: cover;
-  background-image: url(https://images.pexels.com/photos/4553619/pexels-photo-4553619.jpeg) no-repeat;
+  background-size: contain;
+  /* background: url(/imgs/wkly-lvrs-background.jpeg) no-repeat; */
 }
+
 
 .logo{
   display: block;
@@ -30,18 +31,18 @@ form {
 
 .glass{
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 
 h1 {
   margin: 0 0 30px 0;
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   color: #FFF;
 }
 
@@ -188,7 +189,7 @@ input[type="checkbox"] {
 .label-agree-term { 
   font-size: 12px; 
   font-weight: 600; 
-  color: #444; 
+  color: #ccc; 
 }
 
 
@@ -196,7 +197,8 @@ input[type="checkbox"] {
 @media screen and (min-width: 480px) {
 
   body{
-    background: ;
+    background-position: center center;
+    background-size: cover;
   }
 
   
@@ -204,4 +206,88 @@ input[type="checkbox"] {
     max-width: 480px;
   }
 
+}
+
+@media screen and (max-width: 1680px) {
+
+} 
+
+@media screen and (max-width: 1400px) {
+
+} 
+
+@media screen and (max-width: 1280px) {
+
+} 
+
+@media screen and (max-width: 1199px) {
+
+} 
+
+@media screen and (max-width: 1024px) {
+
+} 
+
+@media screen and (max-width: 991px) {
+
+} 
+
+@media screen and (max-width: 767px) {
+
+} 
+
+@media screen and (max-width: 600px) {
+
+} 
+
+@media screen and (max-width: 575px) {
+
+} 
+
+@media screen and (max-width: 480px) {
+
+  body{
+    background-position: -370px center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .logo{
+    display: block;
+    margin: 20px auto;
+    width: 350px;
+  }
+
+  .terms{
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  input[type="checkbox"]{
+    width: 13px;
+  }
+} 
+
+@media screen and (max-width: 375px) {
+
+
+  body{
+    background-position: -285px center;
+    background-size: cover;
+  }
+
+  .logo{
+    display: block;
+    margin: 20px auto;
+    width: 300px;
+  }
+
+  .terms{
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  input[type="checkbox"]{
+    width: 13px;
+  }
 }

@@ -15,14 +15,15 @@
         <h1> SIGN UP BELOW FOR EXCLUSIVE OFFERS
         </h1>
         
+        <label id="first-label" for="name">First Name:</label>
+        <label id="last-label" for="name">Last Name:</label>
         <fieldset class="name">
-              <!-- <label id="first-label" for="name">First Name:</label> -->
               <input type="text" id="first-name" name="user_name" placeholder="First Name*" required>
-              <!-- <label id="last-label" for="name">Last Name:</label> -->
               <input type="text" id="last-name" placeholder="Last Name*" name="" required>
         </fieldset>
+        <label id="email-label" for="email">Email:</label>
+        <label id="gender-label" for="gender">Gender:</label>
         <fieldset class="email-gender">
-          <!-- <label for="email">Email:</label> -->
           <input type="email" id="mail" name="user_email" placeholder="Email*" required>
           
           <select name="gender" id="gender-input" class="form-input gender-input">
@@ -32,12 +33,15 @@
         </select>
         </fieldset>
         
-            <!-- <label for="address">Address:</label> -->
+            <label id="street-label" for="address">Address:</label>
+            <label id="city-label" for="address">City:</label>
             <fieldset class="street-city">
-                <input type="text" class="address" name="address" id="address" placeholder="Street*">
-                <input type="text" class="city-input" name="city" id="city" placeholder="City*">
+              <input type="text" class="address" name="address" id="address" placeholder="Street*">
+              <input type="text" class="city-input" name="city" id="city" placeholder="City*">
             </fieldset>
-
+            
+            <label id="state-label" for="address">State:</label>
+            <label id="zip-label" for="address">Zipcode:</label>
             <fieldset class="state-zip">
                 <select name="state" class="form-input state-input" id="state">
                     <option disabled="disabled" selected="selected">Select State*</option>
@@ -95,7 +99,11 @@
                 </select>
                 <input type="text" class="form-input zip-input" name="zipcode" id="zipcode" placeholder="Zipcode*">
             </fieldset>
-
+            
+            
+            <label id="dob-label" for="address">Date of Birth:</label>
+            <label id="dob-label" for="address">Date of Birth:</label>
+            <label id="dob-label" for="address">Date of Birth:</label>
             <fieldset class="dob">
                 <select name="month" class="form-input month-input" id="month" style="color: #918B89;">
                 <option disabled="disabled" selected="selected">DOB Month*</option>
@@ -235,10 +243,16 @@
               </select>
             </fieldset>
               <div class="terms">
-                  <input type="checkbox" name="agree" id="agree-term" class="ck-box-element age-confirmation-input" value="false">
-                  <label for="agree-term" class="label-agree-term"><span><span></span></span>I am at least 18 years of age and consent to receive sexually explicit emails from or on behalf of WeeklyLover.com, and other marketing partners and their affiliates.</label>
-                  <input type="checkbox" name="agree" id="agree-term" class="ck-box-element age-confirmation-input" value="false">
-                  <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to the statements in  <a href="termsandconditions.html" class="term-service">Terms of Service</a> and <a href="privacypolicy.html" class="term-service">Privacy Policy</a>.</label>
+                  <div class="tnc-top">
+                    <input type="checkbox" name="agree" id="agree-term" class="ck-box-element age-confirmation-input" value="false">
+                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I am at least 18 years of age and consent to receive sexually explicit emails from or on behalf of WeeklyLover.com, and other marketing partners and their affiliates.
+                    </label>
+                  </div>
+                  <div class="tnc-btm">
+                    <input type="checkbox" name="agree" id="agree-term" class="ck-box-element age-confirmation-input" value="false">
+                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to the statements in  <a href="termsandconditions.html" class="term-service">Terms of Service</a> and <a href="privacypolicy.html" class="term-service">Privacy Policy</a>.
+                    </label>
+                  </div>
                 </div>
         
         

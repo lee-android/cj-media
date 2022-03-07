@@ -129,18 +129,40 @@ button {
 }
 
 fieldset {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   border: none;
 }
 
-legend {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
+
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
+}
+
+label#first-label,#email-label,
+#street-label,#state-label{
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+  margin-left: 15px;
+  color: #e0e0e0;
+}
+
+label#last-label,#gender-label,
+#city-label,#zip-label{
+  color: #e0e0e0;
+  display: inline-block;
+  text-align: left;
+  margin-left: -11px;
+}
+
+label#dob-label{
+  display: inline-block;
+  color: #e0e0e0;
+  width: 28%;
+  margin-left: 15px;
+  text-align: left;
 }
 
 label.light {
@@ -181,16 +203,34 @@ input[type="checkbox"] {
 .terms{
   display: inline-flex;
   align-content: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: baseline;
   margin-bottom: 30px;
 }
 
+input[type="checkbox"]{
+  width: 13px;
+  margin-bottom: 10px;
+}
+
 .label-agree-term { 
   font-size: 12px; 
   font-weight: 600; 
-  color: #ccc; 
+  color: #ccc;
+  margin-bottom: 30px; 
+}
+
+.tnc-top {
+  display: -webkit-inline-box;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.tnc-btm {
+  display: -webkit-inline-box;
+  margin: 0;
+  margin-top: -15px;
 }
 
 

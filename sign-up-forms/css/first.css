@@ -157,12 +157,19 @@ label#last-label,#gender-label,
   margin-left: -11px;
 }
 
-label#dob-label{
+label#day-label,
+#month-label,#year-label{
   display: inline-block;
   color: #e0e0e0;
   width: 28%;
   margin-left: 15px;
   text-align: left;
+}
+label#dob-label{
+  color: #e0e0e0;
+  width: 100%;
+  text-align: center;
+  display: none;
 }
 
 label.light {
@@ -293,6 +300,22 @@ input[type="checkbox"]{
     background-attachment: fixed;
   }
 
+  label#day-label,
+  #month-label,#year-label{
+    display: none;
+    color: #e0e0e0;
+    width: 28%;
+    margin-left: 15px;
+    text-align: left;
+  }
+
+  label#dob-label{
+    display: inline;
+    margin-left: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
   .logo{
     display: block;
     margin: 20px auto;
@@ -315,6 +338,22 @@ input[type="checkbox"]{
   body{
     background-position: -285px center;
     background-size: cover;
+  }
+
+  label#day-label,
+  #month-label,#year-label{
+    display: none;
+    color: #e0e0e0;
+    width: 28%;
+    margin-left: 15px;
+    text-align: left;
+  }
+
+  label#dob-label{
+    display: inline;
+    margin-left: 15px;
+    text-align: center;
+    width: 100%;
   }
 
   .logo{

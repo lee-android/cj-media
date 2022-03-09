@@ -45,13 +45,16 @@ p{
 }
 
 .input-field-unsub{
+  background-color: transparent;
+  opacity: 80%;
+  height: 40px;
   box-sizing: border-box;
   margin: 0 auto;
   border-color: #ee4c8ab7;
   border-radius: 5px;
   text-align: center;
   font-size: medium;
-  color: #444;
+  color: #ccc;
   width: 300px;
   margin-bottom: 15px;
   -webkit-border-radius: 5px;
@@ -63,10 +66,11 @@ p{
 
 
 .input-field-unsub::placeholder{
-    color: #444;
-    padding-left: 8px;
-    font-size: 13px;
-    text-align: left;
+    color: #ccc;
+    padding-left: 0px;
+    font-size: 18px;
+    text-align: center;
+    opacity: 100%;
 }
 
 .input-field-unsub:focus{
@@ -77,9 +81,11 @@ p{
 
 
 .unsub-btn{
+    box-sizing: border-box;
     display: block;
     margin: 0 auto;
     border-radius: 5px;
+    border: 3px solid #ee4c8ab7;
     background-color: #ee4c8ab7;
     border: #fff;
     color: #e0e0e0;
@@ -95,7 +101,8 @@ p{
 }
 
 .unsub-btn:hover{
-    background-color: #909394;
+    background-color: transparent;
+    border: 3px solid #ee4c8ab7;
     transition: background-color 200ms linear, color 1s linear;
     -webkit-transition: background-color 200ms linear, color 1s linear;
     -moz-transition: background-color 200ms linear, color 1s linear;

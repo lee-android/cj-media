@@ -45,6 +45,7 @@ p{
 }
 
 .input-field-unsub{
+  box-sizing: border-box;
   margin: 0 auto;
   border-color: #ee4c8ab7;
   border-radius: 5px;

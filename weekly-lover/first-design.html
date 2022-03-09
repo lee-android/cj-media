@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="css/first.css">
         <link rel="stylesheet" href="alertify/css/alertify.css">
         <link rel="stylesheet" href="alertify/css/themes/default.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css">
     </head>
     <body>
         <img class="logo" src="imgs/weekly-lovers-2.png" alt="weekly lovers logo" width="450px">
@@ -15,8 +14,8 @@
     <div class="col-md-12">
       <input class="ipAddress-input" type="hidden" name="ipAddress" value="">
       <input class="siteId-input" type="hidden" id="siteId" name="siteId" value="6">
-      <!-- START OF FORM -->
       <form id="form" autocomplete="off" class="glass" action="index.html" method="post">
+      <div style="max-width:500px;display: table;margin: auto;">
         <h1> SIGN UP BELOW FOR EXCLUSIVE OFFERS
         </h1>
         <!-- LABELS - FIRST/LAST NAME -->
@@ -34,7 +33,7 @@
         <fieldset class="email-gender">
             <input class="email-input" type="email" id="mail" name="user_email" placeholder="Email*" required>
           
-            <select name="gender" id="gender" class="form-input gender-input">
+            <select name="gender" id="gender" class="form-input gender-input" required>
                 <option disabled="disabled" selected="selected">Gender*</option>
                 <option>Male</option>
                 <option>Female</option>
@@ -45,8 +44,8 @@
         <label id="city-label" for="address">City:</label>
         <!-- INPUTS - STREET/CITY -->
         <fieldset class="street-city">
-            <input type="text" class="street-input" name="address" id="address" placeholder="Street*">
-            <input type="text" class="city-input" name="city" id="city" placeholder="City*">
+            <input type="text" class="street-input" name="address" id="address" placeholder="Address">
+            <input type="text" class="city-input" name="city" id="city" placeholder="City">
         </fieldset>
         <!-- LABELS - STATE/ZIP -->
         <label id="state-label" for="address">State:</label>
@@ -54,7 +53,7 @@
         <!-- INPUTS - STATE/ZIP -->
         <fieldset class="state-zip">
             <select name="state" class="form-input state-input" id="state">
-                <option disabled="disabled" selected="selected">Select State*</option>
+                <option disabled="disabled" selected="selected">Select State</option>
                 <option value="AK">Alaska</option>
                 <option value="AL">Alabama</option>
                 <option value="AR">Arkansas</option>
@@ -107,7 +106,7 @@
                 <option value="WV">West Virginia</option>
                 <option value="WY">Wyoming</option>
             </select>
-            <input type="text" class="form-input zip-input" name="zipcode" id="zip" placeholder="Zipcode*">
+            <input type="text" class="form-input zip-input" name="zipcode" id="zip" placeholder="Zipcode">
         </fieldset>
         
         <!-- LABELS - DOB -->
@@ -118,7 +117,7 @@
 
         <!-- START OF DOB INPUT -->
             <fieldset class="dob">
-                <select name="month" class="form-input month-input" id="month">
+                <select name="month" class="form-input month-input" id="month" required>
                 <option disabled="disabled" selected="selected">DOB Month*</option>
                 <option value="01">Jan</option>
                 <option value="02">Feb</option>
@@ -133,7 +132,7 @@
                 <option value="11">Nov</option>
                 <option value="12">Dec</option>
             </select>
-            <select name="day" class="form-input day-input" id="day">
+            <select name="day" class="form-input day-input" id="day" required>
                 <option disabled="disabled" selected="selected">DOB Day*</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
@@ -167,7 +166,7 @@
                 <option value="30">30</option>
                 <option value="31">31</option>
               </select>
-              <select name="year" class="form-input year-input" id="year">
+              <select name="year" class="form-input year-input" id="year" required>
                 <option disabled="disabled" selected="selected">DOB Year*</option>
                 <option value="2002">2004</option>
                 <option value="2002">2003</option>
@@ -275,7 +274,8 @@
         
         <button class="submit-button" type="submit">Sign Up</button>
         
-      </form>
+      <!-- FORM </form> -->
+      </div>
 
         <div class="unsub">
           <h1><a href="unsub.html">unsubscribe</a></h1>
@@ -283,25 +283,24 @@
 
         </div>
       </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+      <script src="alertify/alertify.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script>
 
-        function SignupItem(siteId, firstName, lastName, email, address, city, state, zip, month, day, year, gender){
+        function SignupItem(siteId, firstName, lastName, email, gender, address, city, state, zip, dob, month, day, year){
                   this.SiteId = siteId;
                   this.FirstName = firstName;
                   this.LastName = lastName;
                   this.Email = email;
-                //   this.PhoneNumber = phoneNumber;
                   this.Address = address;
                   this.City = city;
                   this.State = state;
                   this.Zip = zip;
-                //   this.DOB = dob;
+                  this.DOB = dob;
                   this.Month = month;
                   this.Day = day;
                   this.Year = year;
                   this.Gender = gender;
-                //   this.PhoneTypeId = phonetypeId;
   
               }
   
@@ -334,17 +333,8 @@
                     var lnameStatement= 'Last Name: ';
                     var emailInput = $('.email-input').val();
                     var emailStatement= 'Email: ';
-                    // var phoneInput = $('.phone-input').val();
-                    // var phoneStatement= 'Phone: ';
-                    var requirementsMet = true;
-                    var addressInput = $('.street-input').val();
-                    var addressStatement= 'Address: ';
-                    var cityInput = $('.city-input').val();
-                    var cityStatement= 'City: ';
-                    var stateInput = $('.state-input').val();
-                    var stateStatement= 'State: ';
-                    var zipInput = $('.zip-input').val();
-                    var zipStatement= 'Zip: ';
+                    var genderInput = $('.gender-input').val();
+                    var genderStatement= 'Gender: ';
                     var monthInput = $('.month-input').val();
                     var dayInput = $('.day-input').val();
                     var yearInput = $('.year-input').val();
@@ -355,10 +345,15 @@
                         dobInput += monthInput + '/' + dayInput + '/' + yearInput;
                     }
                     var dobStatement= 'DOB: ';
-                    var genderInput = $('.gender-input').val();
-                    var genderStatement= 'Gender: ';
-                    // var phonetypeIdInput = $('#phonetypeId-input').val();
-                    // var phonetypeIdStatement= 'PhoneTypeId: ';
+                    var requirementsMet = true;
+                    var addressInput = $('.street-input').val();
+                    var addressStatement= 'Address: ';
+                    var cityInput = $('.city-input').val();
+                    var cityStatement= 'City: ';
+                    var stateInput = $('.state-input').val();
+                    var stateStatement= 'State: ';
+                    var zipInput = $('.zip-input').val();
+                    var zipStatement= 'Zip: ';
                     var fullName = fnameInput + " " + lnameInput;
   
                     if(ageConfirmationInput == 'true' && privacyPolicyInput == 'true'){
@@ -421,21 +416,17 @@
                             }
                         }
                         if(genderInput == '' || genderInput == null){
-  
+                             requirementsMet = false;
+                            if(missingList == ''){
+                                missingList = missingList + "Gender";
+                            }else{
+                                missingList = missingList + " - Gender";
+                            } 
                         }else{
                             if(enteredInfo == ''){
                                 enteredInfo = enteredInfo + genderStatement + genderInput;
                             }else{
                                 enteredInfo = enteredInfo + ' , ' + genderStatement + genderInput;
-                            }
-                        }
-                        if(phoneInput == '' || phoneInput == null){
-  
-                        }else{
-                            if(enteredInfo == ''){
-                                enteredInfo = enteredInfo + phoneStatement + phoneInput;
-                            }else{
-                                enteredInfo = enteredInfo + ' , ' + phoneStatement + phoneInput;
                             }
                         }
                         if(addressInput == '' || addressInput == null){
@@ -475,7 +466,7 @@
                             }
                         }
                         if(dobInput == '' || dobInput == null){
-  
+
                         }else{
                             if(enteredInfo == ''){
                                 enteredInfo = enteredInfo + dobStatement + dobInput;
@@ -487,7 +478,7 @@
   
                             alertify.success('RequirementsMet: ' + requirementsMet);
                             // console.log('RequirementsMet: ' + requirementsMet);
-                            var newAudienceMember = new SignupItem(siteIdInput, fnameInput, lnameInput, emailInput, phoneInput, addressInput, cityInput, stateInput, zipInput, dobInput, genderInput, ownhomeInput, owncarInput, ownpetInput, parentInput, singleInput, liketotravelInput, phonetypeIdInput, employedInput);
+                            var newAudienceMember = new SignupItem(siteIdInput, fnameInput, lnameInput, emailInput, addressInput, cityInput, stateInput, zipInput, dobInput, genderInput);
                             // console.log(newAudienceMember);
   
                             $.each(newAudienceMember, function(key, value){

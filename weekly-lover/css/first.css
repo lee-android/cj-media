@@ -76,7 +76,7 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea,
-select, #gender-input{
+select, #gender{
   background: rgba(255,255,255,0.1);
   border: none;
   font-size: 16px;
@@ -389,3 +389,9 @@ input[type="checkbox"]{
     width: 13px;
   }
 }
+
+
+
+
+
+/* STYLING FOR FIREFOX */

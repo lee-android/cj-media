@@ -109,27 +109,55 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   /*-- end reset --*/
   body {
-    background-color:#ffffff;
+    background: linear-gradient(45deg, #EE7752, #E73C7E, #2EA6D5, #23D5AB);
+    background-size: 800% 800%;
     padding: 0px;
     margin: 0px;
     overflow-y:hidden;
-    height:100%;
+    height:100vh;
     overflow-x:hidden;
-    width:100%;
+    width:100vw;
     font-family: sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     text-shadow: none;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-     -khtml-user-select: none; /* Konqueror */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+    background-position: fixed;
+    animation: change 10s ease-in-out infinite;
+    -webkit-touch-callout: none;
+    /*iOSSafari*/-webkit-user-select: none;
+    /*Chrome/Safari/Opera*/-khtml-user-select: none;
+    /*Konqueror*/-moz-user-select: none;
+    /*Firefox*/-ms-user-select: none;
+    /*InternetExplorer/Edge*/user-select: none;
+    -webkit-animation: change 10s ease-in-out infinite;
+}
+
+  @keyframes change {
+    0%{
+      background-position: 60% 60% ;
+    }
+    50%{
+      background-position: 100% 70%;
+    }
+    100%{
+      background-position: 60% 60%;
+    }
   }
 
-  #gradient{
+  .logo{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    opacity: 100%;
+    padding-top: 20px;
+  }
 
+  .logo img{
+    display: none;
+    width: 90%;
+    max-width: 450px;
   }
   
   h1 {
@@ -221,9 +249,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   input[type="submit"] {
     font-size: .9em;
     color: #fff;
-    background: #76b852;
+    background: #9352b8;
     outline: none;
-    border: 1px solid #76b852;
+    border: 1px solid #9352b8;
     cursor: pointer;
     padding: 0.9em;
     -webkit-appearance: none;
@@ -238,7 +266,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -o-transition: .5s all;
     -ms-transition: .5s all;
     transition: .5s all;
-    background: #8DC26F;
+    background: #602b80;
   }
   
   .agileits-top p {
@@ -272,7 +300,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   input.checkbox {
-    background: #8DC26F;
+    background: #9352b8;
     cursor: pointer;
     width: 1.2em;
     height: 1.2em;

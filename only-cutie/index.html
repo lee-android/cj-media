@@ -17,13 +17,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- web font -->
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <!-- //web font -->
-<script src="js/gradient.js"></script>
+<!-- CDN -->
+
 </head>
 <body>
-    
+	<div class="logo">
+		<img src="img/logo-draft.png" alt="Only Cutie">
+	</div>
 	<!-- main -->
-	<div class="main-w3layouts wrapper" id="gradient">
-		<h1>Creative SignUp Form</h1>
+	<div class="main-w3layouts wrapper">
+		<h1>A premium online dating experience</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post">
@@ -61,7 +64,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li></li>
 			<li></li>
 		</ul>
-	</>
 	<!-- //main -->
+	<!-- jQuery Is OPTIONAL -->
+<script src="/path/to/cdn/jquery.slim.min.js"></script>
+<!-- stripe-gradient.js -->
+<script src="dist/stripe-gradient.js"></script>
+<script>
+		// As A Vanilla JS Plugin
+new Gradient({
+    canvas: '#demo',
+    colors: ['#a960ee', '#ff333d', '#90e0ff', '#ffcb57']
+});
+
+// // As A jQuery Plugin
+// $('#demo').gradient({
+//   colors: ['#a960ee', '#ff333d', '#90e0ff', '#ffcb57']
+// });
+</script>
 </body>
 </html>

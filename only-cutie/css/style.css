@@ -1,10 +1,68 @@
 html, body, h2 {
   margin: 0;
   padding: 0.5em;
+  overflow-x: hidden;
 }
 
 body {
-  background: #111 url("https://i.imgur.com/i3OA2PJ.jpg") repeat 0 0;
+  color: #e0e0e0;
+  background:linear-gradient(0deg, rgb(45, 17, 49), rgba(86, 147, 155, 0.3)), url(/img/only-cutie-bg.jpg) no-repeat scroll;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1{
+  font-family: "Sansita Swashed";
+  font-size: 5.3rem;
+  color: #e0e0e0;
+  background: rgb(2,0,36);
+  background: linear-gradient(4deg, rgba(2,0,36,1) 0%, rgba(88,9,121,1) 35%, rgba(20,125,147,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  text-shadow: 2px 2px 4px #e9297975; 
+}
+
+
+.container{
+  color: #444;
+  display: block;
+  /* background-color: aqua; */
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.logo{
+  display: block;
+  width: 480px;
+  margin: 0 auto;
+}
+
+.logo img{
+  position: relative;
+  width: auto;
+  height: 28px;
+}
+
+#sparkle-1{
+  margin-right: -28px;
+  margin-bottom: -7px;
+}
+
+#sparkle-2{
+  margin-bottom: 30px;
+  margin-left: -24px;
+}
+
+.glass{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .show {
@@ -15,57 +73,47 @@ body {
 .form {
   margin: 0 auto;
   border-radius: 2px;
+  max-width: 480px;
 }
 
 .title {
   margin-bottom: 0.5em;
+  color: #e0e0e0;
   display: block;
-  background: orange;
-  font-family: 'Nunito', sans-serif;
+  border: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 2px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /*background: rgb(219, 111, 165);
+  */font-family: 'Nunito', sans-serif;
   font-size: 22px;
   padding: 1em;
   text-transform: uppercase;
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
-.flag {
-  position: absolute;
-  top: 7px;
-  border-radius: 2px;
-  border: 35px solid;
-  border-top-color: orange;
-  border-bottom-color: orange;
-}
+
+
 
 .show ~ .title {
   z-index: 2;
   width: 300px;
   position: relative;
-  top: 250px;
+  top: 80px;
   left: 0;
   transition:
       width 200ms ease-out,
       top 200ms ease-out;
 }
-
-.show ~ .title .flag {
-  opacity: 0; 
-}
-
-.show ~ .title .left {
-  left: 0;
-  border-right-color: orange;
-  border-left-color: transparent;
-}
-
-.show ~ .title .right {
-  right: 0;
-  border-right-color: transparent;
-  border-left-color: orange;
-}
-
 .show ~ .form {
   opacity: 0;
   transition:
@@ -78,29 +126,12 @@ body {
   width: 500px;
 }
 
-.show:checked ~ .title .left {
-  opacity: 0.7;
-  left: -55px;
-  transition: 
-      opacity 50ms linear 200ms,
-      left 50ms linear 200ms;
-}
-
-.show:checked ~ .title .right {
-  opacity: 0.7;
-  right: -55px;
-  transition: 
-      opacity 50ms linear 200ms,
-      right 50ms linear 200ms;
-}
-
 .show:checked ~ .form {
   opacity: 1;
 }
 
 .form {
-  width: 500px;
-  background: #ddd;
+  width: 480px;
   padding: 2em 0 2em 0;
 }
 
@@ -112,7 +143,7 @@ body {
 
 .group {
   display: flex;
-  margin-bottom: 2em;
+  margin-bottom: .5em;
 }
 
 .group:after {
@@ -138,6 +169,10 @@ body {
   margin-left: 6em;
 }
 
+select {
+  margin-right: 30px;
+}
+
 label[for="gender"]{
   margin: 0 auto;
   margin-left: 8.4em;
@@ -153,6 +188,19 @@ label[for="zipcode"]{
   margin-left: 8.8em;
 }
 
+label[for="dob"]{
+  margin: 0 auto;
+  text-align: center;
+}
+
+select, input::placeholder{
+  color: #9e9191;
+}
+
+input{
+  color: #e0e0e0;
+}
+
 .col-1,
 .col-2 {
   float: left;
@@ -164,10 +212,11 @@ label[for="zipcode"]{
 }
 
 form label {
+  color: #e0e0e0;
   height: 40px;
   line-height: 40px;
   font-size: 18px;
-  text-shadow: 0.5px 0.5px 0 #fff;
+  text-shadow: 0.5px 0.5px 0 #333;
   font-family: 'Nunito', sans-serif;
   text-transform: capitalize;
 }
@@ -177,7 +226,7 @@ form label {
   padding: 5px;
 }
 
-.col-1 input, select {
+.col-1 input, select, option {
   width: 100%;
   height: 40px;
   font-family: 'Nunito', sans-serif;
@@ -192,7 +241,7 @@ form label {
   background: rgba(80,80,80,0.1);
 }
 
-.col-2 input, select {
+.col-2 input, select, option {
   width: 100%;
   height: 40px;
   font-family: 'Nunito', sans-serif;
@@ -336,4 +385,88 @@ input[type="submit"] {
 .submit:hover {
   color: orange;
   background: rgba(0,0,0,1);
+}
+
+
+
+
+@media screen and (max-width: 1680px) {
+
+} 
+
+@media screen and (max-width: 1400px) {
+
+} 
+
+@media screen and (max-width: 1280px) {
+
+} 
+
+@media screen and (max-width: 1199px) {
+
+} 
+
+@media screen and (max-width: 1024px) {
+
+} 
+
+@media screen and (max-width: 991px) {
+
+} 
+
+@media screen and (max-width: 767px) {
+
+} 
+
+@media screen and (max-width: 600px) {
+
+} 
+
+@media screen and (max-width: 575px) {
+
+} 
+
+@media screen and (max-width: 480px) {
+
+  
+} 
+
+@media screen and (max-width: 375px) {
+  
+  h1{
+    font-size: 4.3em;
+  }
+  .show:checked ~ .title {
+    position: relative;
+    top: 0;
+    width: 330px;
+  }
+
+  form label {
+    color: #e0e0e0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    text-shadow: 0.5px 0.5px 0 #333;
+    font-family: 'Nunito', sans-serif;
+    text-transform: capitalize;
+  }
+
+  label[for="f-name"],
+  label[for="email"],
+  label[for="address"],
+  label[for="state"]{
+
+  margin-left: 20px;
+  }
+
+  .form {
+    width: 330px;
+    padding: 2em 0 2em 0;
+  }
+
+  .label{
+    margin: 0 2em;
+  }
+
 }

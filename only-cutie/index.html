@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<title>Document</title>
+	<title>Only Cutie: A Premium Online Dating Experience</title>
 </head>
 <body>
 	<div id="background-wrap">
@@ -44,10 +44,10 @@
 		</div>
 		<div class="group">
 			<div class="col-1">
-				<input type="text" id="f-name" placeholder="First Name" />
+				<input class="fname-input" type="text" id="firstName" name="user_name" placeholder="First Name" required/>
 			</div>
 			<div class="col-2">
-				<input type="text" id="l-name" placeholder="Last Name" />
+				<input class="lname-input" type="text" id="lastName" placeholder="Last Name" required/>
 			</div>
 		</div>
 		<!-- email -->
@@ -57,7 +57,7 @@
 		</div>
 		<div class="group">
 			<div class="col-1">
-				<input type="email" for="email" id="email" placeholder="Email">
+				<input class="email-input" type="email" for="email" name="user_email" id="email" placeholder="Email" required/>
 			</div>
 			<div class="col-2">
 				<select name="gender" id="gender" class="form-input gender-input" required>
@@ -304,7 +304,251 @@
 	</form>
 </div>
 
-<!-- I declare to have read and accepted the termas of service -->
-<!-- Show me popular news via email -->
+<script src="alertify/alertify.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+
+        function SignupItem(siteId, firstName, lastName, email, gender, address, city, state, zip, dob, month, day, year){
+                  this.SiteId = siteId;
+                  this.FirstName = firstName;
+                  this.LastName = lastName;
+                  this.Email = email;
+                  this.Address = address;
+                  this.City = city;
+                  this.State = state;
+                  this.Zip = zip;
+                  this.DOB = dob;
+                  this.Month = month;
+                  this.Day = day;
+                  this.Year = year;
+                  this.Gender = gender;
+  
+              }
+  
+                $('.ck-box-element').click(function(){
+                    var currentValue = $(this).val();
+                    // console.log('currentValue: ' + currentValue);
+                    if(currentValue == 'false'){
+                        $(this).val('true');
+                    }else{
+                        $(this).val('false');
+                    }
+                });
+  
+                $('.submit-button').click(function(){
+                    var uri = 'https://api.weeklylover.com/api/signup'
+  
+                    console.log('button-clicked!!!!');
+  
+                    var ageConfirmationInput = $('.age-confirmation-input').val();
+                    // console.log('ageConfirmationInput: ' + ageConfirmationInput);
+                    var privacyPolicyInput = $('.privacy-policy-input').val();
+                    // console.log('privacyPolicyInput: ' + privacyPolicyInput);
+  
+                    var missingList = '';
+                    var enteredInfo = '';
+                    var siteIdInput = $('.siteId-input').val();
+                    var fnameInput = $('.fname-input').val();
+                    var fnameStatement= 'First Name: ';
+                    var lnameInput = $('.lname-input').val();
+                    var lnameStatement= 'Last Name: ';
+                    var emailInput = $('.email-input').val();
+                    var emailStatement= 'Email: ';
+                    var genderInput = $('.gender-input').val();
+                    var genderStatement= 'Gender: ';
+                    var monthInput = $('.month-input').val();
+                    var dayInput = $('.day-input').val();
+                    var yearInput = $('.year-input').val();
+                    var dobInput = '';
+                    if (monthInput == '' || dayInput == '' || yearInput == ''){
+  
+                    }else{
+                        dobInput += monthInput + '/' + dayInput + '/' + yearInput;
+                    }
+                    var dobStatement= 'DOB: ';
+                    var requirementsMet = true;
+                    var addressInput = $('.street-input').val();
+                    var addressStatement= 'Address: ';
+                    var cityInput = $('.city-input').val();
+                    var cityStatement= 'City: ';
+                    var stateInput = $('.state-input').val();
+                    var stateStatement= 'State: ';
+                    var zipInput = $('.zip-input').val();
+                    var zipStatement= 'Zip: ';
+                    var fullName = fnameInput + " " + lnameInput;
+  
+                    if(ageConfirmationInput == 'true' && privacyPolicyInput == 'true'){
+                        // console.log('ageConfirmationInput and privacyPolicyInput are TRUE!!!')
+  
+                        if(fnameInput == '' || fnameInput == null){
+                            requirementsMet = false;
+                            if(missingList == ''){
+                                missingList = missingList + "First Name";
+                            }else{
+                                missingList = missingList + " - First Name";
+                            }
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + fnameStatement + fnameInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + fnameStatement + fnameInput;
+                            }
+                        }
+                        if(lnameInput == '' || lnameInput == null){
+                            requirementsMet = false;
+                            if(missingList == ''){
+                                missingList = missingList + "Last Name";
+                            }else{
+                                missingList = missingList + " - Last Name";
+                            }
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + lnameStatement + lnameInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + lnameStatement + lnameInput;
+                            }
+                        }
+                        if(emailInput == '' || emailInput == null){
+                            requirementsMet = false;
+                            if(missingList == ''){
+                                missingList = missingList + "Email";
+                            }else{
+                                missingList = missingList + " - Email";
+                            }
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + emailStatement + emailInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + emailStatement + emailInput;
+                            }
+                        }
+                        if(dobInput == '' || dobInput == null){
+                            requirementsMet = false;
+                            if(missingList == ''){
+                                missingList = missingList + "DOB";
+                            }else{
+                                missingList = missingList + " - DOB";
+                            }
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + dobStatement + dobInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + dobStatement + dobInput;
+                            }
+                        }
+                        if(genderInput == '' || genderInput == null){
+                             requirementsMet = false;
+                            if(missingList == ''){
+                                missingList = missingList + "Gender";
+                            }else{
+                                missingList = missingList + " - Gender";
+                            } 
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + genderStatement + genderInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + genderStatement + genderInput;
+                            }
+                        }
+                        if(addressInput == '' || addressInput == null){
+  
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + addressStatement + addressInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + addressStatement + addressInput;
+                            }
+                        }
+                        if(cityInput == '' || cityInput == null){
+  
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + cityStatement + cityInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + cityStatement + cityInput;
+                            }
+                        }
+                        if(stateInput == '' || stateInput == null){
+  
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + stateStatement + stateInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + stateStatement + stateInput;
+                            }
+                        }
+                        if(zipInput == '' || zipInput == null){
+  
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + zipStatement + zipInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + phoneStatement + phoneInput;
+                            }
+                        }
+                        if(dobInput == '' || dobInput == null){
+
+                        }else{
+                            if(enteredInfo == ''){
+                                enteredInfo = enteredInfo + dobStatement + dobInput;
+                            }else{
+                                enteredInfo = enteredInfo + ' , ' + dobStatement + dobInput;
+                            }
+                        }
+                        if(requirementsMet){
+  
+                            alertify.success('RequirementsMet: ' + requirementsMet);
+                            // console.log('RequirementsMet: ' + requirementsMet);
+                            var newAudienceMember = new SignupItem(siteIdInput, fnameInput, lnameInput, emailInput, addressInput, cityInput, stateInput, zipInput, dobInput, genderInput);
+                            // console.log(newAudienceMember);
+  
+                            $.each(newAudienceMember, function(key, value){
+                              if (value === "" || value === null){
+                                  delete newAudienceMember[key];
+                              }
+                            });
+  
+                            $.ajax(uri, {
+                                type: "POST",
+                                data: JSON.stringify(newAudienceMember),
+                                contentType: 'application/json; charset=utf-8',
+                                dataType: 'json',
+                                success: function (data) {
+                                    alertify.success(data + ' - There is a new signup!');
+                                    // console.log('SUCCESS!!! - There is a new signup');
+                                    // console.log('returned response: ' + data)
+  
+                                },
+                                error: function (data) {
+  
+                                    alertify.error('Error!');
+                                    // console.log('THERE IS AN ERROR!!!');
+                                    // console.log('returned response: ' + data)
+  
+                                }
+                            });
+  
+                            alert('Registration complete. Welcome to Weekly Lover, ' + fullName +'! Entered details: ( ' + enteredInfo +' )');
+                        }else{
+  
+                            alertify.error('RequirementsMet: ' + requirementsMet);
+                            // console.log('RequirementsMet: ' + requirementsMet);
+                            // alert('Registration incomplete. Missing required details: ( ' + missingList +' )');
+                        }
+  
+                    }else{
+                        if(ageConfirmationInput == 'false' && privacyPolicyInput == 'false'){
+                            alertify.error('Please verify that you are over 18 years old and agree to our privacy policy by clicking the appropriate checkboxes.');
+                        }
+                        if(ageConfirmationInput == 'true' && privacyPolicyInput == 'false'){
+                            alertify.error('Please verify that you agree to our privacy policy by clicking the appropriate checkbox.');
+                        }
+                        if(ageConfirmationInput == 'false' && privacyPolicyInput == 'true'){
+                            alertify.error('Please verify that you are over 18 years old by clicking the appropriate checkboxes.');
+                        }
+                    }
+  
+                  });
+        </script>
 </body>
 </html>

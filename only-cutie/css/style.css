@@ -433,6 +433,19 @@ input[type="submit"] {
   background: rgba(0,0,0,1);
 }
 
+.unsub-container{
+  padding-top: 30px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  color: #e0e0e0;
+}
+
+.unsub-container a {
+  color: #e0e0e0;
+}
+
 
 
 

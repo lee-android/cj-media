@@ -6,7 +6,7 @@ html, body, h2 {
 
 body {
   color: #e0e0e0;
-  background:linear-gradient(0deg, rgb(45, 17, 49), rgba(86, 147, 155, 0.3)), url(/img/only-cutie-bg.jpg) no-repeat scroll;
+  background:linear-gradient(0deg, rgb(45, 17, 49), rgba(86, 147, 155, 0.3)), url(https://images.pexels.com/photos/7545282/pexels-photo-7545282.jpeg) no-repeat scroll;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -24,6 +24,23 @@ h1{
   text-shadow: 2px 2px 4px #e9297975; 
 }
 
+.logo a{
+  text-decoration: none;
+}
+
+h3{
+
+  padding-top:20px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: small;
+  color: #e0e0e0;
+}
+
+h3 a{
+  color:#ccc;
+}
+
 
 .container{
   color: #444;
@@ -35,13 +52,14 @@ h1{
 }
 
 .logo{
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 480px;
   margin: 0 auto;
+  text-decoration: none;
 }
 
 .logo img{
-  position: relative;
   width: auto;
   height: 28px;
 }
@@ -226,9 +244,9 @@ form label {
   padding: 5px;
 }
 
-.col-1 input, select, option {
+.col-1 input, select, option, #mail-input {
   width: 100%;
-  height: 40px;
+  text-align: center;
   font-family: 'Nunito', sans-serif;
   outline: none;
   border: none;
@@ -243,7 +261,6 @@ form label {
 
 .col-2 input, select, option {
   width: 100%;
-  height: 40px;
   font-family: 'Nunito', sans-serif;
   outline: none;
   border: none;
@@ -290,8 +307,8 @@ input[type="submit"] {
 
 .group-2 label a {
   position: relative;
-  text-decoration: none;
-  color: blue;
+  /* text-decoration: none; */
+  color: #ddd;
 }
 
 .group-2 label a:after {
@@ -348,7 +365,7 @@ input[type="submit"] {
 }
 
 .checkbox ~ label {
-  color: rgba(0,0,0,0.4);
+  color: rgba(238, 238, 237, 0.4);
   transition: color 100ms linear;
 }
 
@@ -363,16 +380,16 @@ input[type="submit"] {
 }
 
 .checkbox:checked ~ label {
-  color: rgba(0,0,0,1);
+  color: rgba(202, 184, 25, 0.705)
 }
 
 .submit {
+  font-family:"Sansita Swashed";
   border: none;
   outline: none;
   position: relative;
   height: 40px;
   color: #fff;
-  font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
   border-radius: 2px;
   background: rgba(0,0,0,0.6);
@@ -383,7 +400,34 @@ input[type="submit"] {
 }
 
 .submit:hover {
-  color: orange;
+  color: rgba(202, 184, 25, 0.705);
+  background: rgba(0,0,0,1);
+}
+
+.unsub-btn{
+  padding-top: 20px;
+}
+
+
+.unsub {
+  font-family: 'Nunito', sans-serif;
+  border: none;
+  outline: none;
+  display: block;
+  margin:0 auto;
+  height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 0 1px 0 #000;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  transition: background 70ms linear;
+}
+
+.unsub:hover {
+  color: #e4dcdf75;
   background: rgba(0,0,0,1);
 }
 
@@ -428,10 +472,103 @@ input[type="submit"] {
 
 @media screen and (max-width: 480px) {
 
+  .show:checked ~ .title {
+    position: relative;
+    top: 0;
+    width: 440px;
+  }
+
+  .form {
+    width: 440px;
+    padding: 2em 0 2em 0;
+  }
+
+  .label label[for="l-name"] {
+    margin: 0 auto;
+    margin-left: 4.6em;
+  }
+
+  label[for="gender"] {
+    margin: 0 auto;
+    margin-left: 6.9em;
+  
+  }
+
+  label[for="city"] {
+    margin: 0 auto;
+    margin-left: 5.9em;
+  }
+
+  label[for="zipcode"] {
+    margin: 0 auto;
+    margin-left: 7.2em;
+  }
+  
+}
+
+@media screen and (max-width: 414px) {
+
+  .logo{
+    width:100%;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  
+
+  .show:checked ~ .title {
+    position: relative;
+    top: 0;
+    width: 374px;
+  }
+
+  .form {
+    width: 374px;
+    padding: 2em 0 2em 0;
+  }
+
+  .label label[for="l-name"] {
+    margin: 0 auto;
+    margin-left: 3em;
+  }
+
+  label[for="gender"] {
+    margin: 0 auto;
+    margin-left: 5.3em;
+  
+  }
+
+  label[for="city"] {
+    margin: 0 auto;
+    margin-left: 4.3em;
+  }
+
+  label[for="zipcode"] {
+    margin: 0 auto;
+    margin-left: 5.6em;
+  }
   
 } 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 395px) {
+
+  .form{
+    width:345px;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .logo img{
+    width: auto;
+    height: 28px;
+  }
   
   h1{
     font-size: 4.3em;
@@ -439,7 +576,7 @@ input[type="submit"] {
   .show:checked ~ .title {
     position: relative;
     top: 0;
-    width: 330px;
+    width: 345px;
   }
 
   form label {
@@ -452,6 +589,27 @@ input[type="submit"] {
     text-transform: capitalize;
   }
 
+  .label label[for="l-name"] {
+    margin: 0 auto;
+    margin-left: 4em;
+  }
+
+  label[for="gender"] {
+    margin: 0 auto;
+    margin-left: 6.3em;
+  
+  }
+
+  label[for="city"] {
+    margin: 0 auto;
+    margin-left: 5.3em;
+  }
+
+  label[for="zipcode"] {
+    margin: 0 auto;
+    margin-left: 6.7em;
+  }
+
   label[for="f-name"],
   label[for="email"],
   label[for="address"],
@@ -460,13 +618,319 @@ input[type="submit"] {
   margin-left: 20px;
   }
 
-  .form {
-    width: 330px;
-    padding: 2em 0 2em 0;
-  }
+  
 
   .label{
     margin: 0 2em;
   }
 
+}
+
+@media screen and (max-width: 360px){
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .show:checked ~ .title {
+    position: relative;
+    top: 0;
+    width: 323px;
+  }
+
+  .form{
+    width: 323px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo{
+    width: 100%;
+  }
+
+  .show:checked ~ .title {
+    position: relative;
+    top: 0;
+    width: 290px;
+  }
+
+  h1{
+    font-size: 3.6em;
+  }
+
+  .form{
+    width: 290px;
+  }
+
+  .label label[for="l-name"] {
+    margin: 0 auto;
+    margin-left: 2.7em;
+  }
+
+  label[for="gender"] {
+    margin: 0 auto;
+    margin-left: 5.1em;
+  }
+  
+  label[for="city"] {
+    margin: 0 auto;
+    margin-left: 4em;
+  }
+
+  label[for="zipcode"] {
+    margin: 0 auto;
+    margin-left: 5.2em;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#background-wrap {
+  bottom: 0;
+left: 0;
+position: fixed;
+right: 0;
+top: 0;
+z-index: -1;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateBubble {
+  0% {
+      margin-top: 1000px;
+  }
+  100% {
+      margin-top: -100%;
+  }
+}
+
+@-moz-keyframes animateBubble {
+  0% {
+      margin-top: 1000px;
+  }
+  100% {
+      margin-top: -100%;
+  }
+}
+
+@keyframes animateBubble {
+  0% {
+      margin-top: 1000px;
+  }
+  100% {
+      margin-top: -100%;
+  }
+}
+
+@-webkit-keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:50px;
+  }
+}
+
+@-moz-keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:50px;
+  }
+}
+
+@keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:50px;
+  }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+  -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: -5%;
+top: 5%;
+
+-webkit-transform: scale(0.6);
+-moz-transform: scale(0.6);
+transform: scale(0.6);
+}
+
+.x2 {
+  -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+
+left: 5%;
+top: 80%;
+
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+.x3 {
+  -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 10%;
+top: 40%;
+
+-webkit-transform: scale(0.7);
+-moz-transform: scale(0.7);
+transform: scale(0.7);
+}
+
+.x4 {
+  -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+
+left: 20%;
+top: 0;
+
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x5 {
+  -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+
+left: 30%;
+top: 50%;
+
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+.x6 {
+  -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 50%;
+top: 0;
+
+-webkit-transform: scale(0.8);
+-moz-transform: scale(0.8);
+transform: scale(0.8);
+}
+
+.x7 {
+  -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 65%;
+top: 70%;
+
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+.x8 {
+  -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+
+left: 80%;
+top: 10%;
+
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x9 {
+  -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+
+left: 90%;
+top: 50%;
+
+-webkit-transform: scale(0.6);
+-moz-transform: scale(0.6);
+transform: scale(0.6);
+}
+
+.x10 {
+  -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+
+left: 80%;
+top: 80%;
+
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+/* OBJECTS */
+
+.bubble {
+  -webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+
+  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+
+  height: 200px;
+position: absolute;
+width: 200px;
+}
+
+.bubble:after {
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+
+  -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+
+content: "";
+  height: 180px;
+left: 10px;
+position: absolute;
+width: 180px;
 }

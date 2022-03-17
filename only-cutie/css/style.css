@@ -1,7 +1,19 @@
-html, body, h2 {
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h2, p{
   margin: 0;
   padding: 0.5em;
   overflow-x: hidden;
+}
+
+.print{
+  font-family: 'Nunito', sans-serif;
+  font-size: small;
+  margin-top: -6px;
 }
 
 body {
@@ -21,7 +33,7 @@ h1{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #ffffff;
-  text-shadow: 2px 2px 4px #e9297975;
+  text-shadow: 2px 2px 4px #e9297975; 
 }
 
 .logo a{
@@ -75,7 +87,6 @@ h3 a{
 }
 
 .glass{
-  padding: 20px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -123,31 +134,7 @@ h3 a{
 
 
 
-.show ~ .title {
-  z-index: 2;
-  width: 300px;
-  position: relative;
-  top: 80px;
-  left: 0;
-  transition:
-      width 200ms ease-out,
-      top 200ms ease-out;
-}
-.show ~ .form {
-  opacity: 0;
-  transition:
-      opacity 200ms linear;
-}
 
-.show:checked ~ .title {
-  position: relative;
-  top: 0;
-  width: 500px;
-}
-
-.show:checked ~ .form {
-  opacity: 1;
-}
 
 .form {
   width: 480px;
@@ -176,40 +163,72 @@ h3 a{
 }
 
 .label{
-  display: flex;
-  align-content: left;
-  justify-content: space-between;
-  margin: 0 4em;
-  text-align: left;
+  width: 100%;
+  display: block;
 }
 
-.label label[for="l-name"]{
+
+label[for="f-name"]{
+  display: inline-block;
+  text-align: left;
+  width: 35%;
+  margin-left: 75px;
+}
+
+
+
+label[for="email"],
+label[for="address"],
+label[for="state"] {
+  display: inline-block;
+  text-align: left;
+  width: 39%;
+  margin-left: 75px;
+}
+
+
+
+
+label[for="l-name"] {
+  display: inline-block;
+  text-align: left;
+  width: 89px;
+}
+
+label[for="gender"] {
+  display: inline-block;
+  text-align: left;
+  width: 89px;
+}
+
+label[for="city"] {
+  display: inline-block;
+  text-align: left;
+  width: 89px;
+}
+
+label[for="zipcode"] {
+  display: inline-block;
+  text-align: left;
+  width: 89px;
+}
+
+label[for="dob"] {
+  display: block;
+  text-align: center;
+}
+
+.label{
+  height: 25px;
+}
+
+.dob-label{
+  text-align: center;
   margin: 0 auto;
-  margin-left: 6em;
 }
 
 select {
   margin-right: 30px;
-}
-
-label[for="gender"]{
-  margin: 0 auto;
-  margin-left: 8.4em;
-}
-
-label[for="city"]{
-  margin: 0 auto;
-  margin-left: 7.4em;
-}
-
-label[for="zipcode"]{
-  margin: 0 auto;
-  margin-left: 8.8em;
-}
-
-label[for="dob"]{
-  margin: 0 auto;
-  text-align: center;
 }
 
 select, input::placeholder{
@@ -230,10 +249,20 @@ input{
   padding: 5px;
 }
 
-label {
+form label {
   color: #e0e0e0;
   height: 40px;
   line-height: 40px;
+  font-size: 18px;
+  text-shadow: 0.5px 0.5px 0 #333;
+  font-family: 'Nunito', sans-serif;
+  text-transform: capitalize;
+}
+
+label{
+  display: flex;
+  color: #e0e0e0;
+  height: 40px;
   font-size: 18px;
   text-shadow: 0.5px 0.5px 0 #333;
   font-family: 'Nunito', sans-serif;
@@ -345,6 +374,18 @@ input[type="submit"] {
   
 }
 
+.toggle1{
+  position: relative;
+  width: 41px;
+  height: 21px;
+  border-radius: 10px;
+  margin-right: 1em;
+  background: #ccc;
+  box-shadow:
+      inset 0 0 2px 0 rgba(0,0,0,0.5),
+      0.5px 0.5px 0 0 #fff;
+}
+
 .toogle:before {
   content: '';
   width: 15px;
@@ -382,6 +423,10 @@ input[type="submit"] {
 
 .checkbox:checked ~ label {
   color: rgba(202, 184, 25, 0.705)
+}
+
+.print{
+  width: 80%;
 }
 
 .submit {
@@ -484,14 +529,66 @@ input[type="submit"] {
 
 @media screen and (max-width: 575px) {
 
+
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 75px;
+  }
+  
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 75px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="city"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+
+  label[for="zipcode"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
+  }
 } 
 
 @media screen and (max-width: 480px) {
 
-  .show:checked ~ .title {
-    position: relative;
-    top: 0;
-    width: 440px;
+  .print{
+    width: 82%;
   }
 
   .form {
@@ -499,30 +596,70 @@ input[type="submit"] {
     padding: 2em 0 2em 0;
   }
 
-  .label label[for="l-name"] {
-    margin: 0 auto;
-    margin-left: 4.6em;
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 65px;
   }
-
-  label[for="gender"] {
-    margin: 0 auto;
-    margin-left: 6.9em;
   
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 65px;
   }
 
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
   label[for="city"] {
-    margin: 0 auto;
-    margin-left: 5.9em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
   }
 
   label[for="zipcode"] {
-    margin: 0 auto;
-    margin-left: 7.2em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
   }
   
 }
 
 @media screen and (max-width: 414px) {
+
+  .print {
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    margin-top: -6px;
+    width: 265px;
+  }
 
   .logo{
     width:100%;
@@ -532,43 +669,77 @@ input[type="submit"] {
     font-size: 4.8em;
   }
 
-  
-
-  .show:checked ~ .title {
-    position: relative;
-    top: 0;
-    width: 374px;
-  }
 
   .form {
     width: 374px;
     padding: 2em 0 2em 0;
   }
 
-  .label label[for="l-name"] {
-    margin: 0 auto;
-    margin-left: 3em;
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 56px;
   }
-
-  label[for="gender"] {
-    margin: 0 auto;
-    margin-left: 5.3em;
   
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 56px;
   }
 
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
   label[for="city"] {
-    margin: 0 auto;
-    margin-left: 4.3em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
   }
 
   label[for="zipcode"] {
-    margin: 0 auto;
-    margin-left: 5.6em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
   }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
+  }
+
   
 } 
 
 @media screen and (max-width: 395px) {
+
+  .print {
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    margin-top: -6px;
+    width: 223px;
+  }
 
   .form{
     width:345px;
@@ -589,85 +760,146 @@ input[type="submit"] {
   h1{
     font-size: 4.3em;
   }
-  .show:checked ~ .title {
-    position: relative;
-    top: 0;
-    width: 345px;
-  }
 
-  form label {
-    color: #e0e0e0;
-    height: 40px;
-    line-height: 40px;
-    font-size: 15px;
-    text-shadow: 0.5px 0.5px 0 #333;
-    font-family: 'Nunito', sans-serif;
-    text-transform: capitalize;
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 55px;
   }
-
-  .label label[for="l-name"] {
-    margin: 0 auto;
-    margin-left: 4em;
-  }
-
-  label[for="gender"] {
-    margin: 0 auto;
-    margin-left: 6.3em;
   
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 55px;
   }
 
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
   label[for="city"] {
-    margin: 0 auto;
-    margin-left: 5.3em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
   }
 
   label[for="zipcode"] {
-    margin: 0 auto;
-    margin-left: 6.7em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
   }
-
-  label[for="f-name"],
-  label[for="email"],
-  label[for="address"],
-  label[for="state"]{
-
-  margin-left: 20px;
-  }
-
   
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
 
   .label{
-    margin: 0 2em;
+    height: 25px;
   }
-
 }
 
 @media screen and (max-width: 360px){
+
+  
+  .print {
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    margin-top: -6px;
+    width: 224px;
+  }
 
   h1 {
     font-size: 4em;
   }
 
-  .show:checked ~ .title {
-    position: relative;
-    top: 0;
-    width: 323px;
-  }
-
   .form{
     width: 323px;
   }
+
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 44px;
+  }
+  
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 44px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="city"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+
+  label[for="zipcode"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
+  }
+
 }
 
 @media screen and (max-width: 320px) {
+
+  .print{
+    width: 180px;
+  }
+ 
+
+
   .logo{
     width: 100%;
-  }
-
-  .show:checked ~ .title {
-    position: relative;
-    top: 0;
-    width: 290px;
   }
 
   h1{
@@ -676,26 +908,61 @@ input[type="submit"] {
 
   .form{
     width: 290px;
+    padding: 2em 0 2em 0;
   }
 
-  .label label[for="l-name"] {
-    margin: 0 auto;
-    margin-left: 2.7em;
+  .label{
+    height: 25px;
   }
 
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 39px;
+  }
+  
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 44px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
   label[for="gender"] {
-    margin: 0 auto;
-    margin-left: 5.1em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
   }
   
   label[for="city"] {
-    margin: 0 auto;
-    margin-left: 4em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
   }
 
   label[for="zipcode"] {
-    margin: 0 auto;
-    margin-left: 5.2em;
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
   }
 
 

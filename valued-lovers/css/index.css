@@ -12,14 +12,14 @@ body{
 
 h1{
     font-family: "abril fatface";
-    font-size: 4rem;
+    font-size: 4em;
     color: #e0e0e0;
     background: rgb(2,0,36);
     background: linear-gradient(4deg, rgba(2,0,36,1) 0%, rgb(96, 35, 35) 35%, rgba(20,125,147,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: .1px #ccc;
-    text-shadow: 2px 2px 4px #e9297975;
+    text-shadow: 1px 1px 1px #e9297975;
     text-align: center;
 }
 
@@ -321,42 +321,7 @@ select{
 
 
 
-  
-@media screen and (max-width: 1680px) {
 
-} 
-
-@media screen and (max-width: 1400px) {
-
-} 
-
-@media screen and (max-width: 1280px) {
-
-} 
-
-@media screen and (max-width: 1199px) {
-
-} 
-
-@media screen and (max-width: 1024px) {
-
-} 
-
-@media screen and (max-width: 991px) {
-
-} 
-
-@media screen and (max-width: 767px) {
-
-} 
-
-@media screen and (max-width: 600px) {
-
-} 
-
-@media screen and (max-width: 575px) {
-
-}
 
 @media screen and (max-width: 414px) {
     body{
@@ -369,7 +334,7 @@ select{
     }
 
     h1{
-        font-size: 2.2rem;
+        font-size: 3.2rem;
     }
 
     .container{
@@ -428,7 +393,7 @@ select{
     }
 
     h1{
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
 
     .container{
@@ -487,7 +452,7 @@ select{
     }
 
     h1{
-        font-size: 2.2rem;
+        font-size: 2.9rem;
     }
 
     .container{
@@ -546,7 +511,7 @@ select{
     }
 
     h1{
-        font-size: 2.2rem;
+        font-size: 2.6rem;
     }
 
     .container{

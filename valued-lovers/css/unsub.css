@@ -18,7 +18,7 @@ html, body, h2, p{
 
 body {
   color: #e0e0e0;
-  background:linear-gradient(0deg, rgb(45, 17, 49), rgba(86, 147, 155, 0.3)), url(https://github.com/lee-android/cj-media/blob/master/valued-lovers/img/pexels-pixabay-414032.jpg?raw=true) no-repeat scroll;
+  background:linear-gradient(0deg, rgb(45, 17, 49), rgba(86, 147, 155, 0.3)), url(https://github.com/lee-android/cj-media/blob/master/valued-lovers/img/pexels-pixabay-414032.jpg) no-repeat scroll;
   background-position: center 15%;
   background-size:cover;
   background-attachment: fixed;

@@ -11,14 +11,19 @@ body{
 }
 
 h1{
-    font-family: 'abril fatface';
+    font-family: "abril fatface";
     font-size: 4rem;
     color: #e0e0e0;
-    letter-spacing: .2rem;
-    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(4deg, rgba(2,0,36,1) 0%, rgb(96, 35, 35) 35%, rgba(20,125,147,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .1px #ccc;
+    text-shadow: 2px 2px 4px #e9297975;
     text-align: center;
-    text-shadow: 5px 5px 10px #000;
 }
+
+
 
 .container{
     max-width: 480px;
@@ -28,7 +33,7 @@ h1{
 }
 
 .form-container{
-    background-color: #602323;
+    background-color: rgb(96, 35, 35);
     padding: 20px;
     width: 45%;
     /* display: inline-flex; */
@@ -110,6 +115,15 @@ label[for="dob"]{
 select{
     width: 99px;
 }
+
+/* .glass{
+    background: linear-gradient(135deg, rgba(81, 49, 49, 0.45), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border:.5px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  } */
 
 .group-2 {
     margin-bottom: 1em;
@@ -345,17 +359,237 @@ select{
 }
 
 @media screen and (max-width: 414px) {
+    body{
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, rgba(2,0,36,0) 100%, rgba(0, 0, 0, 0.4) 100%, rgba(28,28,28,1) 100%), url(https://images.pexels.com/photos/919372/pexels-photo-919372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+        /* background-size: cover cover; */
+        background-position-x: -759px;
+        background-position-y: -89px;
+        background-attachment: fixed;
+    }
 
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .container{
+        padding-top: 50px;
+    }
+
+    .image-container{
+        display: none;
+    }
+
+    .form-container{
+        background-color: #60232344;
+        padding: 20px;
+        width: 64%;
+        /* display: inline-flex; */
+    }
+
+    .col-2{
+        margin-left: 57px;
+    }
+
+    .print{
+        width: 194px;
+    }
+
+    label[for="l-name"]{
+        margin-left: 77px;
+    }
+    
+    label[for="gender"]{
+        margin-left: 114px;
+    }
+    label[for="city"]{
+        margin-left: 97px;
+    }
+    
+    label[for="zipcode"]{
+        margin-left: 119px;
+    }
+    
+    label[for="dob"]{
+        text-align: center;
+        margin-left: 60px;
+        padding-top: 30px;
+    }
 } 
 
 @media screen and (max-width: 395px) {
+    body{
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, rgba(2,0,36,0) 100%, rgba(0, 0, 0, 0.4) 100%, rgba(28,28,28,1) 100%), url(https://images.pexels.com/photos/919372/pexels-photo-919372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+        /* background-size: cover cover; */
+        background-position-x: -759px;
+        background-position-y: -89px;
+        background-attachment: fixed;
+    }
 
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .container{
+        padding-top: 50px;
+    }
+
+    .image-container{
+        display: none;
+    }
+
+    .form-container{
+        background-color: #60232344;
+        padding: 20px;
+        width: 68%;
+        /* display: inline-flex; */
+    }
+
+    .col-2{
+        margin-left: 57px;
+    }
+
+    .print{
+        width: 194px;
+    }
+
+    label[for="l-name"]{
+        margin-left: 77px;
+    }
+    
+    label[for="gender"]{
+        margin-left: 114px;
+    }
+    label[for="city"]{
+        margin-left: 97px;
+    }
+    
+    label[for="zipcode"]{
+        margin-left: 119px;
+    }
+    
+    label[for="dob"]{
+        text-align: center;
+        margin-left: 60px;
+        padding-top: 30px;
+    }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 375px){
+    body{
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, rgba(2,0,36,0) 100%, rgba(0, 0, 0, 0.4) 100%, rgba(28,28,28,1) 100%), url(https://images.pexels.com/photos/919372/pexels-photo-919372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+        /* background-size: cover cover; */
+        background-position-x: -759px;
+        background-position-y: -89px;
+        background-attachment: fixed;
+    }
 
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .container{
+        padding-top: 50px;
+    }
+
+    .image-container{
+        display: none;
+    }
+
+    .form-container{
+        background-color: #60232344;
+        padding: 20px;
+        width: 71%;
+        /* display: inline-flex; */
+    }
+
+    .col-2{
+        margin-left: 57px;
+    }
+
+    .print{
+        width: 194px;
+    }
+
+    label[for="l-name"]{
+        margin-left: 77px;
+    }
+    
+    label[for="gender"]{
+        margin-left: 114px;
+    }
+    label[for="city"]{
+        margin-left: 97px;
+    }
+    
+    label[for="zipcode"]{
+        margin-left: 119px;
+    }
+    
+    label[for="dob"]{
+        text-align: center;
+        margin-left: 60px;
+        padding-top: 30px;
+    }
 }
 
 @media screen and (max-width: 320px) {
+    body{
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, rgba(2,0,36,0) 100%, rgba(0, 0, 0, 0.4) 100%, rgba(28,28,28,1) 100%), url(https://images.pexels.com/photos/919372/pexels-photo-919372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+        /* background-size: cover cover; */
+        background-position-x: -759px;
+        background-position-y: -89px;
+        background-attachment: fixed;
+    }
 
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .container{
+        padding-top: 50px;
+    }
+
+    .image-container{
+        display: none;
+    }
+
+    .form-container{
+        background-color: #60232344;
+        padding: 20px;
+        width: 84%;
+        /* display: inline-flex; */
+    }
+
+    .col-2{
+        margin-left: 57px;
+    }
+
+    .print{
+        width: 194px;
+    }
+
+    label[for="l-name"]{
+        margin-left: 77px;
+    }
+    
+    label[for="gender"]{
+        margin-left: 114px;
+    }
+    label[for="city"]{
+        margin-left: 97px;
+    }
+    
+    label[for="zipcode"]{
+        margin-left: 119px;
+    }
+    
+    label[for="dob"]{
+        text-align: center;
+        margin-left: 60px;
+        padding-top: 30px;
+    }
 }

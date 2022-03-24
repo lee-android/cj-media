@@ -32,7 +32,7 @@ h1{
   background: linear-gradient(4deg, rgba(2,0,36,1) 0%, rgb(96, 35, 35) 35%, rgba(20,125,147,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: .1px #ffffff;
+  -webkit-text-stroke: 1px #ffffff;
   text-shadow: 1px 1px 1px #e9297975; 
 }
 

@@ -595,12 +595,23 @@ label.valid {
     max-width: 1200px; } }
 @media screen and (max-width: 768px) {
 
+  .unsubscribe-image{
+    display: none;
+  }
+
+  .tnc{
+    color: #222 !important;
+  }
+
   input, select, textarea {
     background-color: #e0e0e02d;
   }
   
+  body.unsub-body{
+    background-color: #222;
+  }
 
-  body{
+  body.main-background{
     background: url(https://github.com/lee-android/cj-media/blob/master/select-hottie/img/sexy.jpeg?raw=true);
     background-size: cover;
     background-position: -880px center; 

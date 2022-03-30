@@ -558,14 +558,14 @@ input {
 }
 
 .card-2 .card-heading {
-  background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("/img/image.jpeg") center right/cover no-repeat;
+  background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("../img/image.jpeg") center right/cover no-repeat;
   width: 58.1%;
   background-position: -660px;
   /* background-position: center center; */
   display: table-cell;
 }
 .card-2 .card-heading-2 {
-  background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("/img/image.jpeg") top center/cover no-repeat;
+  background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("../img/image.jpeg") top center/cover no-repeat;
   width: 58.1%;
   background-position: -52px;
   /* background-position: center center; */

@@ -551,14 +551,14 @@ input {
 }
 
 .card-2 .card-heading {
-  background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("/img/90770245_l.jpeg") top center/cover no-repeat;
+  background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("../img/90770245_l.jpeg") top center/cover no-repeat;
   width: 58.1%;
   background-position: -520px;
   /* background-position: center center; */
   display: table-cell;
 }
 .card-2 .card-heading-2 {
-  background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("/img/90770245_l.jpeg") top center/cover no-repeat;
+  background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("../img/90770245_l.jpeg") top center/cover no-repeat;
   width: 58.1%;
   background-position: -58px;
   /* background-position: center center; */

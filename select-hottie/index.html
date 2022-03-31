@@ -18,7 +18,7 @@
   <body class="main-background">
 
     <div class="main">
-      <img src="img/logo.png" style="display:block;margin-right:auto;margin-left:auto;padding-bottom:40px;">
+      <img src="img/logo2.png" style="display:block;margin-right:auto;margin-left:auto;padding-bottom:40px;">
         <section class="signup">
             <div class="container glass">
                 <div class="signup-content">
@@ -487,8 +487,6 @@
                         }else{
                             if(enteredInfo == ''){
                                 enteredInfo = enteredInfo + zipStatement + zipInput;
-                            }else{
-                                enteredInfo = enteredInfo + ' , ' + phoneStatement + phoneInput;
                             }
                         }
                         if(dobInput == '' || dobInput == null){
@@ -533,7 +531,7 @@
                                 }
                             });
   
-                            alert('Registration complete. Welcome to Weekly Lover, ' + fullName +'! Entered details: ( ' + enteredInfo +' )');
+                            
                         }else{
   
                             alertify.error('RequirementsMet: ' + requirementsMet);

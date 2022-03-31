@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Wiser Lover: A mature online dating experience</title>
+    <title>Wiser Lover: A Mature Online Dating Experience</title>
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -14,7 +14,7 @@
 <body>
     <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
         <div class="wrapper wrapper--w960">
-          	<img src="img/logo.png" style="max-width:400px;width:80%;display:block;padding-bottom:30px;margin-left:auto;margin-right:auto;">
+          	<img src="img/logo.png" style="max-width:400px;width:80%;display:block;padding-bottom:10px;margin-left:auto;margin-right:auto;">
             <div class="card card-2">
                 <div class="card-heading"></div>
                 <div class="card-body">
@@ -27,7 +27,6 @@
                       <input id="parent-input" class="parent-input" type="hidden"name="parent" value="">
                       <input id="single-input" class="single-input" type="hidden"name="single" value="">
                       <input id="liketotravel-input" class="liketotravel-input" type="hidden"name="liketotravel" value="">
-                      <input id="phonetypeId-input" class="phonetypeId-input" type="hidden"name="phonetypeId" value="">
                       <input id="employed-input" class="employed-input" type="hidden"name="employed" value="">
                         <div class="row row-space">
                             <div class="col-2">
@@ -351,7 +350,6 @@
     							this.FirstName = firstName;
     							this.LastName = lastName;
     							this.Email = email;
-    							// this.PhoneNumber = phoneNumber;
     							this.Address = address;
     							this.City = city;
     							this.State = state;
@@ -419,19 +417,10 @@
     								}
     							}
 
-    							this.PhoneTypeId = phonetypeId;
-
-    							if(employed == 'true'){
-    									this.Employed = true;
-    							}else{
-    								if(employed == ''){
-    									this.Employed = '';
-    								}else{
-    									this.Employed = false;
-    								}
+    						
     							}
 
-    					}
+    					
 
     						$('.ck-box-element').click(function(){
     								var currentValue = $(this).val();
@@ -462,8 +451,6 @@
     								var lnameStatement= 'First Name: ';
     								var emailInput = $('.email-input').val();
     								var emailStatement= 'Email: ';
-    								// var phoneInput = $('.phone-input').val();
-    								// var phoneStatement= 'Phone: ';
     								var requirementsMet = true;
     								var addressInput = $('.address-input').val();
     								var addressStatement= 'Address: ';
@@ -497,8 +484,6 @@
     								var singleStatement= 'Single: ';
     								var liketotravelInput = $('#liketotravel-input').val();
     								var liketotravelStatement= 'LikeToTravel: ';
-    								var phonetypeIdInput = $('#phonetypeId-input').val();
-    								var phonetypeIdStatement= 'PhoneTypeId: ';
     								var employedInput = $('#employed-input').val();
     								var employedStatement= 'Employed: ';
     								var fullName = fnameInput + " " + lnameInput;
@@ -571,15 +556,6 @@
     														enteredInfo = enteredInfo + ' , ' + genderStatement + genderInput;
     												}
     										}
-    										// if(phoneInput == '' || phoneInput == null){
-    										//
-    										// }else{
-    										// 		if(enteredInfo == ''){
-    										// 				enteredInfo = enteredInfo + phoneStatement + phoneInput;
-    										// 		}else{
-    										// 				enteredInfo = enteredInfo + ' , ' + phoneStatement + phoneInput;
-    										// 		}
-    										// }
     										if(addressInput == '' || addressInput == null){
 
     										}else{
@@ -629,7 +605,7 @@
 
     												alertify.success('RequirementsMet: ' + requirementsMet);
     												// console.log('RequirementsMet: ' + requirementsMet);
-    												var newAudienceMember = new SignupItem(siteIdInput, fnameInput, lnameInput, emailInput, addressInput, cityInput, stateInput, zipInput, dobInput, genderInput, ownhomeInput, owncarInput, ownpetInput, parentInput, singleInput, liketotravelInput, phonetypeIdInput, employedInput);
+    												var newAudienceMember = new SignupItem(siteIdInput, fnameInput, lnameInput, emailInput, addressInput, cityInput, stateInput, zipInput, dobInput, genderInput);
     												// console.log(newAudienceMember);
 
     												$.ajax(uri, {

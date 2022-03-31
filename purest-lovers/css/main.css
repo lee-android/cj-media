@@ -560,21 +560,20 @@ input {
 .card-2 .card-heading {
   background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("../img/image.jpeg") center right/cover no-repeat;
   width: 58.1%;
-  background-position: -660px;
+  background-position: -533px;
   /* background-position: center center; */
   display: table-cell;
 }
 .card-2 .card-heading-2 {
   background: linear-gradient(0deg, rgba(254, 5, 76, 0.059), rgba(0, 0, 0, 0.32)), url("../img/image.jpeg") top center/cover no-repeat;
   width: 58.1%;
-  background-position: -52px;
   /* background-position: center center; */
   display: table-cell;
 }
 
 .card-2 .card-body {
   display: table-cell;
-  padding: 80px 90px;
+  padding: 80px 8px;
   padding-bottom: 88px;
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 

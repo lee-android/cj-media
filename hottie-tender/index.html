@@ -473,8 +473,6 @@
                         }else{
                             if(enteredInfo == ''){
                                 enteredInfo = enteredInfo + zipStatement + zipInput;
-                            }else{
-                                enteredInfo = enteredInfo + ' , ' + phoneStatement + phoneInput;
                             }
                         }
                         if(dobInput == '' || dobInput == null){
@@ -519,7 +517,7 @@
                                 }
                             });
   
-                            alert('Registration complete. Welcome to Hottie Tender, ' + fullName +'! Entered details: ( ' + enteredInfo +' )');
+                            // alert('Registration complete. Welcome to Hottie Tender, ' + fullName +'! Entered details: ( ' + enteredInfo +' )');
                         }else{
   
                             alertify.error('RequirementsMet: ' + requirementsMet);

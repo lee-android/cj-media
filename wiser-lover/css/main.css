@@ -567,7 +567,7 @@ input {
 
 .card-2 .card-body {
   display: table-cell;
-  padding: 80px 90px;
+  padding: 80px 8px;
   padding-bottom: 88px;
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);;
 }

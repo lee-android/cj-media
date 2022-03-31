@@ -452,7 +452,8 @@ input[type="submit"] {
 }
 
 .submit:hover {
-  color: rgba(202, 184, 25, 0.705);
+  color: rgba(114, 3, 94, 0.705);
+  transition: .2s ease-in-out;
   background: rgba(0,0,0,1);
 }
 
@@ -494,6 +495,10 @@ input[type="submit"] {
 
 .unsub-container a {
   color: #e0e0e0;
+}
+.unsub-container a:hover {
+  color: rgba(117, 47, 104, 0.705);
+  transition: .2s ease-in-out;
 }
 
 

@@ -1,0 +1,25 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Dela Gothic One" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One" />
+    <mj-breakpoint width="320px" />
+    <mj-attributes>
+
+      <mj-text font-family="Dela Gothic One" color="#fff" />
+      <mj-class name="h1" font-size="40px" letter-spacing="1.5px" align="center" font-family="Dela Gothic One" text-transform="uppercase" style="border:1px solid #000;" />
+      <mj-section margin="0"  />
+    </mj-attributes>
+    <mj-title>🔥 Welcome To Hottie Tender 🔥</mj-title>
+  </mj-head>
+  <mj-body>
+    <mj-container background-color="white">
+      <mj-section background-color="#0F0A10">
+        <mj-column background-color="#0F0A10">
+          <mj-image src="" alt="" />
+          <mj-text mj-class="h1" css-class="h1">
+            Hottie Tender
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>

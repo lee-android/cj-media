@@ -1,0 +1,87 @@
+input, select{
+  background: transparent !important;
+  color: rgb(195, 195, 255) !important;
+}
+input, select:focus{
+  outline: none;
+}
+
+.input-field{
+  border-bottom: 1px dashed antiquewhite !important;
+}
+
+.d8ta-select, .d8ta-select-comp{
+  border-bottom: 1px dashed antiquewhite !important;
+}
+
+
+
+.main{
+  height: 100vh;
+  max-width:100%; 
+  background: url('../img/bg_main.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+}
+
+
+
+.terms{
+  color: antiquewhite !important;
+}
+
+.terms a{
+  color: rgb(195, 195, 255) !important;
+  
+}
+
+.terms a:hover{
+  color: rgb(255, 245, 195) !important;
+  transition: .5s ease-in-out;
+  
+}
+
+.forminfo, .label{
+  color: antiquewhite !important;
+}
+
+.glass {
+  max-width:450px;
+  border: 1px solid #c7c8ca;
+  border-radius:10px;
+  /* background-color:#ffffff; */
+  opacity:95%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+::placeholder {
+  color: #c0c0c0;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1000px){
+
+
+  table .main {
+    background-image:  url('../img/bg_main.jpeg') !important;
+    background-position: top !important;
+    background-size: cover;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+  table .main {
+
+  background-image:  url('../img/bg_main.jpeg') !important;
+  background-size: cover;
+  background-position: top !important;
+
+}
+}

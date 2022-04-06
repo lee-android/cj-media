@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap')
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #303030;
+}
+
+h1{
+    font-family: "abril fatface";
+    font-size: 3.5em;
+    color: #e0e0e0;
+    background: rgb(2,0,36);
+    -webkit-background-clip: text;
+    text-align: center;
+    margin: 0;
+}
+
+
+.container{
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form-container{
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    width: 45%;
+    /* display: inline-flex; */
+}
+
+.image-container{
+    background-color: aqua;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(0, 0, 0, 0.4) 35%, rgba(28,28,28,1) 100%), url("../img/index-pic.jpeg");
+    background-size: cover;
+    background-position: top;
+  	background-attachment: scroll, local;
+
+}
+
+input, select{
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 91px;
+}
+
+label{
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+
+.dob{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width:60%;
+}
+
+.group{
+    padding-bottom: 12px;
+}
+
+
+label[for="dob"]{
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* .glass{
+    background: linear-gradient(135deg, rgba(81, 49, 49, 0.45), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border:.5px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  } */
+
+.group-2 {
+    margin-bottom: 1em;
+    margin-top: 30px;
+  }
+  
+  .group-2:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .group-2 *:not(a) {
+    float: left;
+  }
+  
+  .group-2 .checkbox {
+    display: none;
+  }
+  
+  .group-2 label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    height: 100%;
+    cursor: pointer;
+    line-height: 22px;
+  }
+  
+  .group-2 label a {
+    position: relative;
+    /* text-decoration: none; */
+    color: #ddd;
+  }
+  
+  .group-2 label a:after {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    right: 50%;
+    content: '';
+    height: 1px;
+    background: blue;
+    transition:
+        left 70ms linear,
+        right 70ms linear;
+  }
+  
+  .group-2 label a:hover:after {
+    left: 0;
+    right: 0;
+  }
+  
+.col-11{
+      width: 49%;
+      text-align:center;
+      display:inline-block;
+}
+.col-22{
+      width: 49%;
+      text-align:center;
+      display:inline-block;
+}
+
+.col-1{
+      width: 49%;
+      text-align:center;
+      display:inline-block;
+}
+.col-2{
+      width: 49%;
+      text-align:center;
+      display:inline-block;
+}
+  
+  .toogle {
+    position: relative;
+    width: 41px;
+    height: 21px;
+    border-radius: 10px;
+    margin-right: 1em;
+    background: #ccc;
+    box-shadow:
+        inset 0 0 2px 0 rgba(0,0,0,0.5),
+        0.5px 0.5px 0 0 #fff;
+    
+  }
+  
+  .toggle1{
+    position: relative;
+    width: 41px;
+    height: 21px;
+    border-radius: 10px;
+    margin-right: 1em;
+    background: #ccc;
+    box-shadow:
+        inset 0 0 2px 0 rgba(0,0,0,0.5),
+        0.5px 0.5px 0 0 #fff;
+  }
+  
+  .toogle:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .checkbox ~ label .toogle:before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: left 150ms linear;
+  }
+  
+  .checkbox ~ label .toogle {
+    background: rgba(182,99,99,0.5);
+  }
+  
+  .checkbox ~ label {
+    color: rgba(238, 238, 237, 0.4);
+    transition: color 100ms linear;
+  }
+  
+  .checkbox:checked ~ label .toogle:before {
+    position: absolute;
+    top: 3px;
+    left: 22px;
+  }
+  
+  .checkbox:checked ~ label .toogle {
+    background: rgba(0,200,0,0.5);
+  }
+  
+  .checkbox:checked ~ label {
+    color: rgba(202, 184, 25, 0.705)
+  }
+  
+  .print{
+    width: 155px;
+    margin-top: 0;
+  }
+  
+  .submit {
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    outline: none;
+    position: relative;
+    height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 1px 0 #000;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    transition: background 70ms linear;
+    display: block;
+    margin:0 auto; 
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .submit:hover {
+    color: rgba(202, 184, 25, 0.705);
+    background: rgba(0,0,0,1);
+    cursor: pointer;
+  }
+  
+  .unsub-btn{
+    padding-top: 20px;
+  }
+  
+  
+  .unsub {
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    outline: none;
+    display: block;
+    margin:0 auto;
+    height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 1px 0 #000;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    transition: background 70ms linear;
+  }
+  
+  .unsub:hover {
+    color: #e4dcdf75;
+    background: rgba(0,0,0,1);
+    cursor: pointer;
+  }
+  
+  .unsub-container{
+    padding-top: 30px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #e0e0e0;
+  }
+  
+  .unsub-container a {
+    color: #e0e0e0;
+  }
+
+  .unsub-container:hover a{
+      color: #ccc;
+  }
+
+
+
+
+
+
+@media screen and (max-width: 650px) {
+    body{
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, rgba(2,0,36,0) 100%, rgba(0, 0, 0, 0.4) 100%, rgba(28,28,28,1) 100%), url("../img/index-pic.jpeg") no-repeat;
+        /* background-size: cover cover; */
+        background-position: top;
+        /* background-attachment: fixed; */
+  			background-size:cover;
+  			background-attachment: scroll, local;
+    }
+
+input, select{
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 90%;
+}
+
+.col-11{
+      width: 49%;
+      text-align:center;
+      display:inline-block;
+}
+.col-22{
+      width: 49%;
+      text-align:center;
+      display:inline-block;
+}
+
+.col-1{
+      width: 49%;
+      text-align:center;
+      display:inline-block;
+}
+.col-2{
+      width: 49%;
+      text-align:center;
+      display:inline-block;
+}
+
+.group{
+    display: inline-flex;
+    padding-bottom: 12px;
+    text-align:center;
+    width:100%;
+}
+
+.group-2 {
+    width:100%;
+    margin-top:1px;
+    margin-bottom:1px;
+  }
+
+.container{
+    max-width: 750px;
+    height:850px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+    h1{
+        font-size: 3.2rem;
+    }
+
+
+    .image-container{
+        display: none;
+    }
+
+    .form-container{
+        background-color: #60232344;
+        padding: 20px;
+        width: 90%;
+        text-align:center;
+        /* display: inline-flex; */
+    }
+    .print{
+        width: 80%;
+        color: #e0e0e0;
+    }
+    
+		.dob{
+    	width:66%;
+		}
+}

@@ -1,0 +1,1053 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h2, p{
+  margin: 0;
+  padding: 0.5em;
+  overflow-x: hidden;
+}
+
+.print{
+  font-family: 'Nunito', sans-serif;
+  font-size: small;
+  margin-top: -6px;
+}
+
+body {
+  color: #e0e0e0;
+  background:linear-gradient(0deg, rgba(151, 9, 9, 0.155), rgba(86, 147, 155, 0.3)), url("../dist/bg_main.png") no-repeat scroll;
+  background-position: center 15%;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+h1{
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-family: "Dela Gothic One";
+  font-size: 3.3rem;
+  color: #e0e0e0;
+  background: rgb(2,0,36);
+  background: linear-gradient(4deg, rgb(14 0 255) 0%, rgb(218 82 23) 35%, rgb(172 22 185) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  text-shadow: 2px 2px 4px #e9297975; 
+}
+
+
+
+.logo a{
+  text-decoration: none;
+}
+
+h3{
+
+  padding-top:20px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: small;
+  color: #e0e0e0;
+}
+
+h3 a{
+  color:#ccc;
+}
+
+
+.container{
+  color: #444;
+  display: block;
+  /* background-color: aqua; */
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  width: 480px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.logo img{
+  width: auto;
+  height: 28px;
+}
+
+#sparkle-1{
+  margin-right: -28px;
+  margin-bottom: -7px;
+}
+
+#sparkle-2{
+  margin-bottom: 30px;
+  margin-left: -24px;
+}
+
+.glass{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.show {
+  display: none;
+}
+
+.title,
+.form {
+  margin: 0 auto;
+  border-radius: 2px;
+  max-width: 480px;
+}
+
+.title {
+  margin-bottom: 0.5em;
+  color: #e0e0e0;
+  display: block;
+  border: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 2px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /*background: rgb(219, 111, 165);
+  */font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 1em;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+
+
+
+
+
+.form {
+  width: 480px;
+  padding: 2em 0 2em 0;
+}
+
+.group,
+.group-2 {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.group {
+  display: flex;
+  margin-bottom: .5em;
+}
+
+.group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.dob select{
+  margin: 8px;
+}
+
+.label{
+  width: 100%;
+  display: block;
+}
+
+
+label[for="f-name"]{
+  display: inline-block;
+  text-align: left;
+  width: 35%;
+  margin-left: 75px;
+}
+
+
+
+label[for="email"],
+label[for="address"],
+label[for="state"] {
+  display: inline-block;
+  text-align: left;
+  width: 39%;
+  margin-left: 75px;
+}
+
+
+
+
+label[for="l-name"] {
+  display: inline-block;
+  text-align: left;
+  width: 89px;
+}
+
+label[for="gender"] {
+  display: inline-block;
+  text-align: left;
+  width: 89px;
+}
+
+label[for="city"] {
+  display: inline-block;
+  text-align: left;
+  width: 89px;
+}
+
+label[for="zipcode"] {
+  display: inline-block;
+  text-align: left;
+  width: 89px;
+}
+
+label[for="dob"] {
+  display: block;
+  text-align: center;
+}
+
+.label{
+  height: 25px;
+}
+
+.dob-label{
+  text-align: center;
+  margin: 0 auto;
+}
+
+select {
+  margin-right: 30px;
+}
+
+select, input::placeholder{
+  color: #9e9191;
+}
+
+input{
+  color: #e0e0e0;
+}
+
+.col-1,
+.col-2 {
+  float: left;
+}
+
+.col-1 {
+  width: 50%;
+  padding: 5px;
+}
+
+form label {
+  color: #e0e0e0;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  text-shadow: 0.5px 0.5px 0 #333;
+  font-family: 'Nunito', sans-serif;
+  text-transform: capitalize;
+}
+
+label{
+  display: flex;
+  color: #e0e0e0;
+  height: 40px;
+  font-size: 18px;
+  text-shadow: 0.5px 0.5px 0 #333;
+  font-family: 'Nunito', sans-serif;
+  text-transform: capitalize;
+}
+
+.col-2 {
+  width: 50%;
+  padding: 5px;
+}
+
+.col-1 input, select, option, #mail-input {
+  width: 100%;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 
+      inset 0 0 3px 0 rgba(0,0,0,0.3),
+      0.5px 0.5px 0 0 #fff;
+  padding: 1em;
+  background: rgba(80,80,80,0.1);
+}
+
+.col-2 input, select, option {
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 
+      inset 0 0 3px 0 rgba(0,0,0,0.3),
+      0.5px 0.5px 0 0 #fff;
+  padding: 1em;
+  background: rgba(80,80,80,0.1);
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.group-2 {
+  margin-bottom: 1em;
+}
+
+.group-2:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.group-2 *:not(a) {
+  float: left;
+}
+
+.group-2 .checkbox {
+  display: none;
+}
+
+.group-2 label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  height: 100%;
+  cursor: pointer;
+  line-height: 22px;
+}
+
+.group-2 label a {
+  position: relative;
+  /* text-decoration: none; */
+  color: #ddd;
+}
+
+.group-2 label a:after {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  right: 50%;
+  content: '';
+  height: 1px;
+  background: blue;
+  transition:
+      left 70ms linear,
+      right 70ms linear;
+}
+
+.group-2 label a:hover:after {
+  left: 0;
+  right: 0;
+}
+
+
+
+.toogle {
+  position: relative;
+  width: 41px;
+  height: 21px;
+  border-radius: 10px;
+  margin-right: 1em;
+  background: #ccc;
+  box-shadow:
+      inset 0 0 2px 0 rgba(0,0,0,0.5),
+      0.5px 0.5px 0 0 #fff;
+  
+}
+
+.toggle1{
+  position: relative;
+  width: 41px;
+  height: 21px;
+  border-radius: 10px;
+  margin-right: 1em;
+  background: #ccc;
+  box-shadow:
+      inset 0 0 2px 0 rgba(0,0,0,0.5),
+      0.5px 0.5px 0 0 #fff;
+}
+
+.toogle:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.checkbox ~ label .toogle:before {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: left 150ms linear;
+}
+
+.checkbox ~ label .toogle {
+  background: rgba(200,0,0,0.5);
+}
+
+.checkbox ~ label {
+  color: rgba(238, 238, 237, 0.4);
+  transition: color 100ms linear;
+}
+
+.checkbox:checked ~ label .toogle:before {
+  position: absolute;
+  top: 3px;
+  left: 22px;
+}
+
+.checkbox:checked ~ label .toogle {
+  background: rgba(0,200,0,0.5);
+}
+
+.checkbox:checked ~ label {
+  color: rgba(202, 184, 25, 0.705)
+}
+
+.print{
+  width: 80%;
+}
+
+.submit {
+  font-family: 'Nunito', sans-serif;
+  border: none;
+  outline: none;
+  position: relative;
+  height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 0 1px 0 #000;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  transition: background 70ms linear;
+  display: block;
+  margin:0 auto; 
+}
+
+.submit:hover {
+  color: rgba(114, 3, 94, 0.705);
+  transition: .2s ease-in-out;
+  background: rgba(0,0,0,1);
+}
+
+.unsub-btn{
+  padding-top: 20px;
+}
+
+
+.unsub {
+  font-family: 'Nunito', sans-serif;
+  border: none;
+  outline: none;
+  display: block;
+  margin:0 auto;
+  height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 0 1px 0 #000;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  transition: background 70ms linear;
+}
+
+.unsub:hover {
+  color: #e4dcdf75;
+  background: rgba(0,0,0,1);
+}
+
+.unsub-container{
+  padding-top: 30px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  color: #e0e0e0;
+}
+
+.unsub-container a {
+  color: #e0e0e0;
+}
+.unsub-container a:hover {
+  color: rgba(117, 47, 104, 0.705);
+  transition: .2s ease-in-out;
+}
+
+
+
+
+@media screen and (max-width: 1680px) {
+
+} 
+
+@media screen and (max-width: 1400px) {
+
+} 
+
+@media screen and (max-width: 1280px) {
+
+} 
+
+@media screen and (max-width: 1199px) {
+
+} 
+
+@media screen and (max-width: 1024px) {
+
+} 
+
+@media screen and (max-width: 991px) {
+
+} 
+
+@media screen and (max-width: 767px) {
+
+} 
+
+@media screen and (max-width: 600px) {
+
+} 
+
+@media screen and (max-width: 575px) {
+	
+  body {
+    color: #e0e0e0;
+    background:linear-gradient(0deg, rgba(151, 9, 9, 0.155), rgba(86, 147, 155, 0.3)), url("../dist/bg_main.png") no-repeat scroll;
+    background-position: -89px center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+
+
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 75px;
+  }
+  
+  h1 {
+    font-size: 2.8em;
+  }
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 75px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="city"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+
+  label[for="zipcode"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
+  }
+} 
+
+@media screen and (max-width: 480px) {
+	
+  body {
+    color: #e0e0e0;
+    background:linear-gradient(0deg, rgba(151, 9, 9, 0.155), rgba(86, 147, 155, 0.3)), url("../dist/bg_main.png") no-repeat scroll;
+    background-position: -89px center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+
+  .print{
+    width: 82%;
+  }
+  
+  .logo{
+    width:100%;
+  }
+  
+  h1 {
+    font-size: 2.8em;
+  }
+
+  .form {
+    width: 100%;
+    padding: 2em 0 2em 0;
+  }
+
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 65px;
+  }
+  
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 65px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="city"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+
+  label[for="zipcode"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
+  }
+  
+}
+
+@media screen and (max-width: 414px) {
+	
+  body {
+    color: #e0e0e0;
+    background:linear-gradient(0deg, rgba(151, 9, 9, 0.155), rgba(86, 147, 155, 0.3)), url("../dist/bg_main.png") no-repeat scroll;
+    background-position: -89px center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+
+  .print {
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    margin-top: -6px;
+    width: 265px;
+  }
+
+  .logo{
+    width:100%;
+  }
+
+  h1 {
+    font-size: 2.8em;
+  }
+
+
+  .form {
+    width: 100%;
+    padding: 2em 0 2em 0;
+  }
+
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 56px;
+  }
+  
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 56px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="city"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+
+  label[for="zipcode"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
+  }
+
+  
+} 
+
+@media screen and (max-width: 395px) {
+
+  body {
+    color: #e0e0e0;
+    background:linear-gradient(0deg, rgba(151, 9, 9, 0.155), rgba(86, 147, 155, 0.3)), url("../dist/bg_main.png") no-repeat scroll;
+    background-position: -89px center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+
+  .print {
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    margin-top: -6px;
+    width: 223px;
+  }
+
+  .form{
+    width:100%;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .logo img{
+    width: auto;
+    height: 28px;
+  }
+  
+  h1{
+    font-size: 2.3em;
+  }
+
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 55px;
+  }
+  
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 55px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="city"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+
+  label[for="zipcode"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 360px){
+  
+  body {
+    color: #e0e0e0;
+    background:linear-gradient(0deg, rgba(151, 9, 9, 0.155), rgba(86, 147, 155, 0.3)), url("../dist/bg_main.png") no-repeat scroll;
+    background-position: -89px center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+  
+  .print {
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    margin-top: -6px;
+    width: 224px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .form{
+    width: 100%;
+  }
+  
+  .logo{
+    width:100%;
+  }
+
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 44px;
+  }
+  
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 44px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="city"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+
+  label[for="zipcode"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+  .label{
+    height: 25px;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+  body {
+    color: #e0e0e0;
+    background:linear-gradient(0deg, rgba(151, 9, 9, 0.155), rgba(86, 147, 155, 0.3)), url("../dist/bg_main.png") no-repeat scroll;
+    background-position: -25px center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+
+  .print{
+    width: 180px;
+  }
+ 
+
+
+  .logo{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 2em;
+  }
+
+  .form{
+    width: 100%;
+    padding: 2em 0 2em 0;
+  }
+
+  .label{
+    height: 25px;
+  }
+
+  label[for="f-name"]{
+    display: inline-block;
+    text-align: left;
+    width: 35%;
+    margin-left: 39px;
+  }
+  
+
+
+  label[for="email"],
+  label[for="address"],
+  label[for="state"] {
+    display: inline-block;
+    text-align: left;
+    width: 39%;
+    margin-left: 44px;
+  }
+
+
+
+
+  label[for="l-name"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="gender"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="city"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+
+  label[for="zipcode"] {
+    display: inline-block;
+    text-align: left;
+    width: 89px;
+  }
+  
+  label[for="dob"] {
+    display: block;
+    text-align: center;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

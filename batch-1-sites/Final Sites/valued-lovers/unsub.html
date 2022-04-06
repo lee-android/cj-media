@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/unsub.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<title>Valued Lovers: Unsubscribe</title>
+</head>
+<body>
+<div class="container">
+	<div class="logo">
+		<a href="/">
+			<h1>
+        Valued Lovers
+			</h1>
+		</a>
+	</div>
+	<div class="container">
+        <div class="contained">
+            <h2 style="font-size: 2rem; text-align: center;font-family: 'Nunito', sans-serif;color: #e0e0e0;font-weight: 600;">
+				We're sorry to see you go!
+			</h2>
+            <p style="padding-top:20px; font-size: 1.2rem;color: #e0e0e0;font-family: 'Nunito', sans-serif;text-align: center;font-weight: 500;">Enter your email address to unsubscribe from Valued Lovers.</p>
+            <input id="mail-input" autocomplete="off" type="text" class="input-field-unsub glass" name="email" value="" placeholder="Email">
+            <div class="unsub-btn"><button class="unsub"><span style="padding-top: 40px;">Unsubscribe</span></button></div>
+        </div>
+    </div>
+
+    <script src="alertify/alertify.min.js"></script>
+  <link rel="stylesheet" href="alertify/css/alertify.min.css" />
+  <link rel="stylesheet" href="alertify/css/themes/default.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script>
+      $('.unsub-btn').click(function(){
+          var emailInput = $('.input-field-unsub').val();
+          if(emailInput == '' || emailInput == null){
+              alertify.error('Error!!! Please enter email address to unsubscribe');
+          }else{
+
+              var uri = "https://api.valuedlovers.com/api/unsubscribe?";
+
+              // console.log('button-clicked!!!');
+              var emailInput = $('.input-field-unsub').val();
+              var emailInputStr = "email=" + emailInput;
+              var siteIdInput = $('.siteId-input').val();
+              var siteIdInputStr = "&siteId=" + siteIdInput;
+              // console.log('emailInput: ' + emailInput);
+              var apiEndpoint = uri + emailInputStr + siteIdInputStr;
+              // console.log('apiEndpoint: ' + apiEndpoint);
+
+              $.ajax({
+              type: "GET",
+              url: apiEndpoint
+              }).done(function (data, ) {
+                  alertify.success('Success!!! ' + emailInput + ' has been unsubscribed.');
+                  // console.log(data);
+              }).fail(function (jqXHR, textStatus, errorThrown) {
+                  alertify.error('response-text: ' + jqXHR.responseText + ' | status: ' + textStatus);
+                  // console.log(jqXHR.responseText);
+                  // console.log(textStatus);
+              });
+
+          }
+      });
+  </script>
+</div>
+</body>
+</html>

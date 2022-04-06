@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Wiser Lover: A Mature Online Dating Experience</title>
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+        <div class="wrapper wrapper--w960">
+          	<img src="img/logo.png" style="max-width:400px;width:80%;display:block;padding-bottom:10px;margin-left:auto;margin-right:auto;">
+            <div class="card card-2">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h3 class="title">Sign up to receive the latest news and updates</h3>
+                      <input class="ipAddress-input" type="hidden" name="ipAddress" value="">
+                      <input class="siteId-input" type="hidden" id="siteId" name="siteId" value="6">
+                      <input id="ownhome-input" class="ownhome-input" type="hidden"name="ownhome" value="">
+                      <input id="owncar-input" class="owncar-input" type="hidden"name="owncar" value="">
+                      <input id="ownpet-input" class="ownpet-input" type="hidden"name="ownpet" value="">
+                      <input id="parent-input" class="parent-input" type="hidden"name="parent" value="">
+                      <input id="single-input" class="single-input" type="hidden"name="single" value="">
+                      <input id="liketotravel-input" class="liketotravel-input" type="hidden"name="liketotravel" value="">
+                      <input id="employed-input" class="employed-input" type="hidden"name="employed" value="">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                  <input class="input--style-2 fname-input" type="text" placeholder="First Name*" name="fname">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="input-group">
+                                <input class="input--style-2 lname-input" type="text" placeholder="Last Name*" name="lname">
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                  <input class="input--style-2 email-input" type="text" placeholder="Email*" name="email">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="gender"  id="gender-input" class="d8ta-select gender-input">
+                                        <option disabled="disabled" selected="selected"><span id="select">Gender*</span></option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                  <input class="input--style-2 address-input" type="text" placeholder="Address" name="address">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="input-group">
+                                <input class="input--style-2 city-input" type="text" placeholder="City" name="city">
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                  <div class="rs-select2 js-select-simple select--no-search">
+                                      <select name="state" class=state-input>
+                                          <option disabled="disabled" selected="selected"><span id="select">State*</span></option>
+                                          <option value="AK">Alaska</option>
+                                          <option value="AL">Alabama</option>
+                                          <option value="AR">Arkansas</option>
+                                          <option value="AZ">Arizona</option>
+                                          <option value="CA">California</option>
+                                          <option value="CO">Colorado</option>
+                                          <option value="CT">Connecticut</option>
+                                          <option value="DC">District of Columbia</option>
+                                          <option value="DE">Delaware</option>
+                                          <option value="FL">Florida</option>
+                                          <option value="GA">Georgia</option>
+                                          <option value="HI">Hawaii</option>
+                                          <option value="IA">Iowa</option>
+                                          <option value="ID">Idaho</option>
+                                          <option value="IL">Illinois</option>
+                                          <option value="IN">Indiana</option>
+                                          <option value="KS">Kansas</option>
+                                          <option value="KY">Kentucky</option>
+                                          <option value="LA">Louisiana</option>
+                                          <option value="MA">Massachusetts</option>
+                                          <option value="MD">Maryland</option>
+                                          <option value="ME">Maine</option>
+                                          <option value="MI">Michigan</option>
+                                          <option value="MN">Minnesota</option>
+                                          <option value="MO">Missouri</option>
+                                          <option value="MS">Mississippi</option>
+                                          <option value="MT">Montana</option>
+                                          <option value="NC">North Carolina</option>
+                                          <option value="ND">North Dakota</option>
+                                          <option value="NE">Nebraska</option>
+                                          <option value="NH">New Hampshire</option>
+                                          <option value="NJ">New Jersey</option>
+                                          <option value="NM">New Mexico</option>
+                                          <option value="NV">Nevada</option>
+                                          <option value="NY">New York</option>
+                                          <option value="OH">Ohio</option>
+                                          <option value="OK">Oklahoma</option>
+                                          <option value="OR">Oregon</option>
+                                          <option value="PA">Pennsylvania</option>
+                                          <option value="RI">Rhode Island</option>
+                                          <option value="SC">South Carolina</option>
+                                          <option value="SD">South Dakota</option>
+                                          <option value="TN">Tennessee</option>
+                                          <option value="TX">Texas</option>
+                                          <option value="UT">Utah</option>
+                                          <option value="VA">Virginia</option>
+                                          <option value="VT">Vermont</option>
+                                          <option value="WA">Washington</option>
+                                          <option value="WI">Wisconsin</option>
+                                          <option value="WV">West Virginia</option>
+                                          <option value="WY">Wyoming</option>
+                                      </select>
+                                      <div class="select-dropdown"></div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="input-group">
+                                <input class="input--style-2 zip-input" type="text" placeholder="Zipcode" name="zip">
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-3">
+                                <div class="input-group">
+                                  <div class="rs-select2 js-select-simple select--no-search">
+                                      <select name="month" class="d8ta-select-comp month-input" id="month">
+                                          <option disabled="disabled" selected="selected"><span id="select">DOB Month*</span></option>
+                                          <option value="01">Jan</option>
+                          								<option value="02">Feb</option>
+                          								<option value="03">Mar</option>
+                          								<option value="04">Apr</option>
+                          								<option value="05">May</option>
+                          								<option value="06">Jun</option>
+                          								<option value="07">Jul</option>
+                          								<option value="08">Aug</option>
+                          								<option value="09">Sep</option>
+                          								<option value="10">Oct</option>
+                          								<option value="11">Nov</option>
+                          								<option value="12">Dec</option>
+                                      </select>
+                                      <div class="select-dropdown"></div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="day" class="d8ta-select-comp day-input" id="day">
+                                            <option disabled="disabled" selected="selected"><span id="select">DOB Day*</span></option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="year" class="d8ta-select-comp year-input" id="year">
+                                            <option disabled="disabled" selected="selected"><span id="select">DOB Year*</span></option>
+                                            <option value="2002">2004</option>
+                                            <option value="2002">2003</option>
+                                            <option value="2002">2002</option>
+                                						<option value="2001">2001</option>
+                                						<option value="2000">2000</option>
+                                						<option value="1999">1999</option>
+                                						<option value="1998">1998</option>
+                                						<option value="1997">1997</option>
+                                						<option value="1996">1996</option>
+                                						<option value="1995">1995</option>
+                                						<option value="1994">1994</option>
+                                						<option value="1993">1993</option>
+                                						<option value="1992">1992</option>
+                                						<option value="1991">1991</option>
+                                						<option value="1990">1990</option>
+                                						<option value="1989">1989</option>
+                                						<option value="1988">1988</option>
+                                						<option value="1987">1987</option>
+                                						<option value="1986">1986</option>
+                                						<option value="1985">1985</option>
+                                						<option value="1984">1984</option>
+                                						<option value="1983">1983</option>
+                                						<option value="1982">1982</option>
+                                						<option value="1981">1981</option>
+                                						<option value="1980">1980</option>
+                                						<option value="1979">1979</option>
+                                						<option value="1978">1978</option>
+                                						<option value="1977">1977</option>
+                                						<option value="1976">1976</option>
+                                						<option value="1975">1975</option>
+                                						<option value="1974">1974</option>
+                                						<option value="1973">1973</option>
+                                						<option value="1972">1972</option>
+                                						<option value="1971">1971</option>
+                                						<option value="1970">1970</option>
+                                						<option value="1969">1969</option>
+                                						<option value="1968">1968</option>
+                                						<option value="1967">1967</option>
+                                						<option value="1966">1966</option>
+                                						<option value="1965">1965</option>
+                                						<option value="1964">1964</option>
+                                						<option value="1963">1963</option>
+                                						<option value="1962">1962</option>
+                                						<option value="1961">1961</option>
+                                						<option value="1960">1960</option>
+                                						<option value="1959">1959</option>
+                                						<option value="1958">1958</option>
+                                						<option value="1957">1957</option>
+                                						<option value="1956">1956</option>
+                                						<option value="1955">1955</option>
+                                						<option value="1954">1954</option>
+                                						<option value="1953">1953</option>
+                                						<option value="1952">1952</option>
+                                						<option value="1951">1951</option>
+                                						<option value="1950">1950</option>
+                                						<option value="1949">1949</option>
+                                						<option value="1948">1948</option>
+                                						<option value="1947">1947</option>
+                                						<option value="1946">1946</option>
+                                						<option value="1945">1945</option>
+                                						<option value="1944">1944</option>
+                                						<option value="1943">1943</option>
+                                						<option value="1942">1942</option>
+                                						<option value="1941">1941</option>
+                                						<option value="1940">1940</option>
+                                						<option value="1939">1939</option>
+                                						<option value="1938">1938</option>
+                                						<option value="1937">1937</option>
+                                						<option value="1936">1936</option>
+                                						<option value="1935">1935</option>
+                                						<option value="1934">1934</option>
+                                						<option value="1933">1933</option>
+                                						<option value="1932">1932</option>
+                                						<option value="1931">1931</option>
+                                						<option value="1930">1930</option>
+                                						<option value="1929">1929</option>
+                                						<option value="1928">1928</option>
+                                						<option value="1927">1927</option>
+                                						<option value="1926">1926</option>
+                                						<option value="1925">1925</option>
+                                						<option value="1924">1924</option>
+                                						<option value="1923">1923</option>
+                                						<option value="1922">1922</option>
+                                						<option value="1921">1921</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                              <table style="max-width:500px;">
+                                <tr>
+                                  <td valign="top" style="padding-top:5px;">
+                                      <input type="checkbox" class="ck-box-element age-confirmation-input" name="agree" value="false" style="border:0px;margin:0px;padding:0px;padding-right:5px;">&nbsp;
+                                  </td>
+                                  <td valign="top" style="padding-right:5px;">
+                                      <font style="color:#000000;font-size:10px;font-family: 'Manrope', sans-serif;">By checking this box I consent to receive emails from or on behalf of wiserlover.com, and other marketing partners and their affiliates, that may be of sexually explicit content.
+                                      </font>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table style="max-width:500px;text-align:left;">
+                                <tr>
+                                  <td valign="top" style="padding-top:5px;">
+                                    <input type="checkbox" class="ck-box-element privacy-policy-input" name="agree" value="false"  style="border:0px;margin:0px;padding:0px;padding-right:5px;">&nbsp;
+                                  </td>
+                                  <td valign="top" style="padding-right:5px;">
+                                    <font style="color:#000000;font-size:10px;font-family: 'Manrope', sans-serif;">I have read and agree to the <a href="termsandconditions.html" style="color:#80222b;">Terms & Conditions</a> and <a href="privacypolicy.html" style="color:#80222b;">Privacy Policy</a> and that I am at least 18 years of age.
+                                    </font>
+                                  </td>
+                                </tr>
+                              </table>
+                          </div>
+                        </div>
+
+                        <div class="p-t-30">
+                            <button class="submit-button" type="submit">Sign Up</button>
+                        </div>
+                        <div align="left" style="max-width:100%;padding-top:30px;">
+                          <a href="unsubscribe.html" style="font-size: 13px;color:#80222b;text-align:left;">Unsubscribe</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/select2/select2.min.js"></script>
+        <script src="js/global.js"></script>
+    		<script src="alertifyjs/alertify.min.js"></script>
+    		<link rel="stylesheet" href="alertifyjs/css/alertify.min.css" />
+    		<link rel="stylesheet" href="alertifyjs/css/themes/default.min.css" />
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    				<script>
+
+
+    		function SignupItem(siteId, firstName, lastName, email, phoneNumber, address, city, state, zip, dob, gender, ownhome, owncar, ownpet, parent, single, liketotravel, phonetypeId, employed){
+    							this.SiteId = siteId;
+    							this.FirstName = firstName;
+    							this.LastName = lastName;
+    							this.Email = email;
+    							this.Address = address;
+    							this.City = city;
+    							this.State = state;
+    							this.Zip = zip;
+    							this.DOB = dob;
+    							this.Gender = gender;
+
+    							if(ownhome == 'true'){
+    									this.OwnHome = true;
+    							}else{
+    								if(ownhome == ''){
+    									this.OwnHome = '';
+    								}else{
+    									this.OwnHome = false;
+    								}
+    							}
+
+    							if(owncar == 'true'){
+    									this.OwnCar = true;
+    							}else{
+    								if(owncar == ''){
+    									this.OwnCar = '';
+    								}else{
+    									this.OwnCar = false;
+    								}
+    							}
+
+    							if(ownpet == 'true'){
+    									this.OwnPet = true;
+    							}else{
+    								if(ownpet == ''){
+    									this.OwnPet = '';
+    								}else{
+    									this.OwnPet = false;
+    								}
+    							}
+
+    							if(parent == 'true'){
+    									this.Parent = true;
+    							}else{
+    								if(parent == ''){
+    									this.Parent = '';
+    								}else{
+    									this.Parent = false;
+    								}
+    							}
+
+    							if(single == 'true'){
+    									this.Single = true;
+    							}else{
+    								if(single == ''){
+    									this.Single = '';
+    								}else{
+    									this.Single = false;
+    								}
+    							}
+
+    							if(liketotravel == 'true'){
+    									this.LikeToTravelId = true;
+    							}else{
+    								if(liketotravel == ''){
+    									this.LikeToTravelId = '';
+    								}else{
+    									this.LikeToTravelId = false;
+    								}
+    							}
+
+    						
+    							}
+
+    					
+
+    						$('.ck-box-element').click(function(){
+    								var currentValue = $(this).val();
+    								// console.log('currentValue: ' + currentValue);
+    								if(currentValue == 'false'){
+    										$(this).val('true');
+    								}else{
+    										$(this).val('false');
+    								}
+    						});
+
+    						$('.submit-button').click(function(){
+    								var uri = 'https://api.wiserlover.com/api/signup'
+
+    								// console.log('button-clicked!!!!');
+
+    								var ageConfirmationInput = $('.age-confirmation-input').val();
+    								// console.log('ageConfirmationInput: ' + ageConfirmationInput);
+    								var privacyPolicyInput = $('.privacy-policy-input').val();
+    								// console.log('privacyPolicyInput: ' + privacyPolicyInput);
+
+    								var missingList = '';
+    								var enteredInfo = '';
+    								var siteIdInput = $('.siteId-input').val();
+    								var fnameInput = $('.fname-input').val();
+    								var fnameStatement= 'First Name: ';
+    								var lnameInput = $('.lname-input').val();
+    								var lnameStatement= 'First Name: ';
+    								var emailInput = $('.email-input').val();
+    								var emailStatement= 'Email: ';
+    								var requirementsMet = true;
+    								var addressInput = $('.address-input').val();
+    								var addressStatement= 'Address: ';
+    								var cityInput = $('.city-input').val();
+    								var cityStatement= 'City: ';
+    								var stateInput = $('.state-input').val();
+    								var stateStatement= 'State: ';
+    								var zipInput = $('.zip-input').val();
+    								var zipStatement= 'Zip: ';
+    								var monthInput = $('.month-input').val();
+    								var dayInput = $('.day-input').val();
+    								var yearInput = $('.year-input').val();
+    								var dobInput = '';
+    								if (monthInput == '' || dayInput == '' || yearInput == ''){
+
+    								}else{
+    										dobInput += monthInput + '/' + dayInput + '/' + yearInput;
+    								}
+    								var dobStatement= 'DOB: ';
+    								var genderInput = $('#gender-input').val();
+    								var genderStatement= 'Gender: ';
+    								var ownhomeInput = $('#ownhome-input').val();
+    								var ownhomeStatement= 'OwnHome: ';
+    								var owncarInput = $('#owncar-input').val();
+    								var owncarStatement= 'OwnCar: ';
+    								var ownpetInput = $('#ownpet-input').val();
+    								var ownpetStatement= 'OwnPet: ';
+    								var parentInput = $('#parent-input').val();
+    								var parentStatement= 'Parent: ';
+    								var singleInput = $('#single-input').val();
+    								var singleStatement= 'Single: ';
+    								var liketotravelInput = $('#liketotravel-input').val();
+    								var liketotravelStatement= 'LikeToTravel: ';
+    								var employedInput = $('#employed-input').val();
+    								var employedStatement= 'Employed: ';
+    								var fullName = fnameInput + " " + lnameInput;
+
+    								if(ageConfirmationInput == 'true' && privacyPolicyInput == 'true'){
+    										// console.log('ageConfirmationInput and privacyPolicyInput are TRUE!!!')
+
+    										if(fnameInput == '' || fnameInput == null){
+    												requirementsMet = false;
+    												if(missingList == ''){
+    														missingList = missingList + "First Name";
+    												}else{
+    														missingList = missingList + " - First Name";
+    												}
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + fnameStatement + fnameInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + fnameStatement + fnameInput;
+    												}
+    										}
+    										if(lnameInput == '' || lnameInput == null){
+    												requirementsMet = false;
+    												if(missingList == ''){
+    														missingList = missingList + "Last Name";
+    												}else{
+    														missingList = missingList + " - Last Name";
+    												}
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + lnameStatement + lnameInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + lnameStatement + lnameInput;
+    												}
+    										}
+    										if(emailInput == '' || emailInput == null){
+    												requirementsMet = false;
+    												if(missingList == ''){
+    														missingList = missingList + "Email";
+    												}else{
+    														missingList = missingList + " - Email";
+    												}
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + emailStatement + emailInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + emailStatement + emailInput;
+    												}
+    										}
+    										if(dobInput == '' || dobInput == null){
+    												requirementsMet = false;
+    												if(missingList == ''){
+    														missingList = missingList + "DOB";
+    												}else{
+    														missingList = missingList + " - DOB";
+    												}
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + dobStatement + dobInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + dobStatement + dobInput;
+    												}
+    										}
+    										if(genderInput == '' || genderInput == null){
+
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + genderStatement + genderInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + genderStatement + genderInput;
+    												}
+    										}
+    										if(addressInput == '' || addressInput == null){
+
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + addressStatement + addressInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + addressStatement + addressInput;
+    												}
+    										}
+    										if(cityInput == '' || cityInput == null){
+
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + cityStatement + cityInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + cityStatement + cityInput;
+    												}
+    										}
+    										if(stateInput == '' || stateInput == null){
+
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + stateStatement + stateInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + stateStatement + stateInput;
+    												}
+    										}
+    										if(zipInput == '' || zipInput == null){
+
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + zipStatement + zipInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + zipStatement + zipInput;
+    												}
+    										}
+    										if(dobInput == '' || dobInput == null){
+
+    										}else{
+    												if(enteredInfo == ''){
+    														enteredInfo = enteredInfo + dobStatement + dobInput;
+    												}else{
+    														enteredInfo = enteredInfo + ' , ' + dobStatement + dobInput;
+    												}
+    										}
+    										if(requirementsMet){
+
+    												alertify.success('RequirementsMet: ' + requirementsMet);
+    												// console.log('RequirementsMet: ' + requirementsMet);
+    												var newAudienceMember = new SignupItem(siteIdInput, fnameInput, lnameInput, emailInput, addressInput, cityInput, stateInput, zipInput, dobInput, genderInput);
+    												// console.log(newAudienceMember);
+
+    												$.ajax(uri, {
+    														type: "POST",
+    														data: JSON.stringify(newAudienceMember),
+    														contentType: 'application/json; charset=utf-8',
+    														dataType: 'json',
+    														success: function (data) {
+    																alertify.success(data + ' - There is a new signup!');
+    																// console.log('SUCCESS!!! - There is a new signup');
+    																// console.log('returned response: ' + data)
+
+    														},
+    														error: function (data) {
+
+    																alertify.error('Error!');
+    																// console.log('THERE IS AN ERROR!!!');
+    															 // console.log('returned response: ' + data)
+
+    														}
+    												});
+
+    												alert('Registration complete. Welcome to Wiser Lover, ' + fullName +'! Entered details: ( ' + enteredInfo +' )');
+    										}else{
+
+    												alertify.error('RequirementsMet: ' + requirementsMet);
+    												 // console.log('RequirementsMet: ' + requirementsMet);
+    												 // alert('Registration incomplete. Missing required details: ( ' + missingList +' )');
+    										}
+
+    								}else{
+    										if(ageConfirmationInput == 'false' && privacyPolicyInput == 'false'){
+    												alertify.error('Please verify that you are over 18 years old and agree to our privacy policy by clicking the appropriate checkboxes.');
+    										}
+    										if(ageConfirmationInput == 'true' && privacyPolicyInput == 'false'){
+    												alertify.error('Please verify that you agree to our privacy policy by clicking the appropriate checkbox.');
+    										}
+    										if(ageConfirmationInput == 'false' && privacyPolicyInput == 'true'){
+    												alertify.error('Please verify that you are over 18 years old by clicking the appropriate checkboxes.');
+    										}
+    								}
+
+    							});
+    		</script>
+
+
+
+</body>
+
+
+
+</html>

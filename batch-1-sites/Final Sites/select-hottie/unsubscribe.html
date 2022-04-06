@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select Hottie: Unsubscribe</title>
+    <link rel="stylesheet" href="alertify/css/alertify.css">
+	  <link rel="stylesheet" href="alertify/css/themes/default.css">
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="unsub-body">
+
+    <div class="main">
+      <a href="/"><img src="img/logo2.png" style="display:block;margin-right:auto;margin-left:auto;padding-bottom:40px;"></a>
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h3 class="form-title">Unsubscribe Below</h3>
+                        <input type="hidden" name="ipaddress" value="">
+                          <input class="siteId-input" type="hidden" id="siteId" name="siteId" value="6">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:500px;">
+                                  <tr>
+                                    <td align="left" style="padding:20px 10px 0px 10px;">
+                                      <b>
+                                        <div class="form-group">
+                                          <label for="email"><i class="zmdi zmdi-email  material-icons-name"></i></label>
+                                          <input type="text" class="form-control input-field-unsub" name="email" autocomplete="off" value="" placeholder="Email" style="font: 14px 'Poppins', serif;color:#666;" required>
+                                          <font face=" 'Poppins', sans-serif;" style="font-size: 14pt" color="#73AA00">
+                                        </font>
+                                      </div>
+                                      </b>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:500px;">
+                                <tr>
+                                  <td align="left" style="padding:20px 10px 40px 10px;">
+                                    <button class="unsub-btn" style="display: inline-block; background: red; color: #fff;  border: none;  width: auto;  padding: 15px 39px;  border-radius: 5px;  -moz-border-radius: 5px;  -webkit-border-radius: 5px;  -o-border-radius: 5px;  -ms-border-radius: 5px;  margin-top: 25px;  cursor: pointer;font-family: 'Poppins', sans-serif; " >Unsubscribe
+                                    </button>
+                                  </td>
+                                </tr>
+                              </table>
+                    </div>
+                    <div class="unsubscribe-image">
+                        <figure><img src="img/background.jpeg" alt="unsubscribe image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="alertify/alertify.min.js"></script>
+    <link rel="stylesheet" href="alertify/css/alertify.min.css" />
+    <link rel="stylesheet" href="alertify/css/themes/default.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      $('.unsub-btn').click(function(){
+          var emailInput = $('.input-field-unsub').val();
+          if(emailInput == '' || emailInput == null){
+              alertify.error('Error!!! Please enter email address to unsubscribe');
+          }else{
+
+              var uri = "https://api.selecthottie.com/api/unsubscribe?";
+
+              // console.log('button-clicked!!!');
+              var emailInput = $('.input-field-unsub').val();
+              var emailInputStr = "email=" + emailInput;
+              var siteIdInput = $('.siteId-input').val();
+              var siteIdInputStr = "&siteId=" + siteIdInput;
+              // console.log('emailInput: ' + emailInput);
+              var apiEndpoint = uri + emailInputStr + siteIdInputStr;
+              // console.log('apiEndpoint: ' + apiEndpoint);
+
+              $.ajax({
+              type: "GET",
+              url: apiEndpoint
+              }).done(function (data, ) {
+                  alertify.success('Success!!! ' + emailInput + ' has been unsubscribed.');
+                  // console.log(data);
+              }).fail(function (jqXHR, textStatus, errorThrown) {
+                  alertify.error('response-text: ' + jqXHR.responseText + ' | status: ' + textStatus);
+                  // console.log(jqXHR.responseText);
+                  // console.log(textStatus);
+              });
+
+          }
+      });
+  </script>
+
+</body>
+
+</html>

@@ -1,25 +1,60 @@
 <mjml>
   <mj-head>
     <mj-font name="Dela Gothic One" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One" />
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto" />
     <mj-breakpoint width="320px" />
     <mj-attributes>
-
-      <mj-text font-family="Dela Gothic One" color="#fff" />
-      <mj-class name="h1" font-size="40px" letter-spacing="1.5px" align="center" font-family="Dela Gothic One" text-transform="uppercase" style="border:1px solid #000;" />
-      <mj-section margin="0"  />
+      <mj-text font-family="Roboto" color="antiquewhite" />
+      <mj-image padding="20px" />
+      <mj-class name="h1" padding="0" font-size="70px" letter-spacing="1.5px" align="center" font-family="Dela Gothic One" text-transform="uppercase"/>
+      <mj-class name="h2" padding="10px" padding-top="0" font-size="50px" letter-spacing="1.5px" align="center" font-family="Roboto" text-transform="uppercase" />
+      <mj-section padding="0" />
+      <mj-text padding="0" />
+      <mj-divider padding-top="0" />
+      <mj-button background-color="#AA1166" width="140px" height="50px" inner-padding="10px" border-radius="9px" />
     </mj-attributes>
     <mj-title>🔥 Welcome To Hottie Tender 🔥</mj-title>
   </mj-head>
   <mj-body>
-    <mj-container background-color="white">
-      <mj-section background-color="#0F0A10">
-        <mj-column background-color="#0F0A10">
-          <mj-image src="" alt="" />
-          <mj-text mj-class="h1" css-class="h1">
-            Hottie Tender
-          </mj-text>
+    <mj-container background-color="black" width="600px">
+      <!--Header-->
+      <mj-section background-color="#000" padding-top="30px">
+        <mj-column background-color="#444" border-bottom="5px solid #000" width="600px">
+          <mj-image src="/img/logo.png" alt="Hottie Tender logo" />
         </mj-column>
       </mj-section>
+
+      <!--#Welcome-->
+      <mj-section background-color="#111" padding-bottom="100px">
+        <mj-column width="550px">
+          <mj-text mj-class="h2" font-family="Roboto" padding-top="90px" font-weight="600" align="center">
+            Welcome!            
+          </mj-text>
+        </mj-column>
+        <mj-column width="455px">
+          <mj-text line-height="1.5" align="left" font-family="roboto" align="left" padding-top="50px" font-size="16px" padding-bottom="60px">
+            Congratulations on completing your registration to Hottie Tender. We are ready to assist you in making your online dating experience a great one, but first, please click the button below to confirm your email address.
+          </mj-text>
+
+          <mj-button>
+            Confirm Email
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!--FOOTER-->
+      <mj-section background-color="#444" border-top="5px solid #000">
+        <mj-column width="600px">
+          <mj-text align="center" padding="20px">
+            <a style="color:lightblue;font-size:12px;" href="/">Unsubscribe</a>
+          </mj-text>
+          <mj-text align="center" font-size="10px" line-height="1.2" padding="15px">
+            Hottie Tender © 2022 - 2023<br/>
+            4830 West Kennedy Blvd. Tampa, FL. 33609
+          </mj-text>          
+        </mj-column>
+      </mj-section>
+      
     </mj-container>
   </mj-body>
 </mjml>

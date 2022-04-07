@@ -7,13 +7,13 @@
       <mj-text font-family="Roboto" color="antiquewhite" />
       <mj-image padding="20px" />
       <mj-class name="h1" padding="0" font-size="70px" letter-spacing="1.5px" align="center" font-family="Dela Gothic One" text-transform="uppercase"/>
-      <mj-class name="h2" padding="10px" padding-top="0" font-size="50px" letter-spacing="1.5px" align="center" font-family="Roboto" text-transform="uppercase" />
+      <mj-class name="h2" padding="10px" padding-top="0" font-size="30px" letter-spacing="1.5px" align="center" font-family="Roboto" text-transform="uppercase" />
       <mj-section padding="0" />
       <mj-text padding="0" />
       <mj-divider padding-top="0" />
       <mj-button background-color="#AA1166" width="140px" height="50px" inner-padding="10px" border-radius="9px" />
     </mj-attributes>
-    <mj-title>🔥 Welcome To Hottie Tender 🔥</mj-title>
+    <mj-title>🔥 Your Membership Has Been Upgraded... 🔥</mj-title>
   </mj-head>
   <mj-body>
     <mj-container background-color="black" width="600px">
@@ -25,19 +25,20 @@
       </mj-section>
 
       <!--#Welcome-->
-      <mj-section background-color="#111" padding-bottom="100px">
+      <mj-section background-color="#111" padding-bottom="20px">
         <mj-column width="550px">
-          <mj-text mj-class="h2" font-family="Roboto" padding-top="90px" font-weight="600" align="center">
-            Welcome!            
+          <mj-text mj-class="h2" font-family="Roboto" padding-top="20px" font-weight="600" align="center">
+            Your Membership<br/>
+            Has Been Upgraded 🔥            
           </mj-text>
         </mj-column>
         <mj-column width="455px">
-          <mj-text line-height="1.5" align="left" font-family="roboto" align="left" padding-top="50px" font-size="16px" padding-bottom="60px">
-            Congratulations on completing your registration to Hottie Tender. We are ready to assist you in making your online dating experience a great one, but first, please click the button below to confirm your email address.
+          <mj-text line-height="1.5" align="left" font-family="roboto" align="left" padding-top="25px" font-size="16px" padding-bottom="15px">
+            Congratulations on upgrading your membership! You now have access to options and features that are exclusive to upgraded members like you. Login now to  take your new account for a spin...
           </mj-text>
 
           <mj-button>
-            Confirm Email
+            <a style="color:white;text-decoration:none;" href="https://hottietender.com">Login</a>
           </mj-button>
         </mj-column>
       </mj-section>
@@ -46,7 +47,7 @@
       <mj-section background-color="#444" border-top="5px solid #000">
         <mj-column width="600px">
           <mj-text align="center" padding="20px">
-            <a style="color:lightblue;font-size:12px;" href="/">Unsubscribe</a>
+            <a style="color:lightblue;font-size:12px;" href="https://hottietender.com/unsub">Unsubscribe</a>
           </mj-text>
           <mj-text align="center" font-size="10px" line-height="1.2" padding="15px">
             Hottie Tender © 2022 - 2023<br/>
